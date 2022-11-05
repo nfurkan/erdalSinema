@@ -132,10 +132,10 @@
                 <div class="form-wrap wow slideInDown">
                   <!--Select 2-->
                   <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                    <option value="1">Kullanıcı Tipini Seçiniz</option>
-                    <option value="2">Normal</option>
-                    <option value="3">Öğrenci</option>
-                    <option value="4">Doktor</option>
+                    <option value="null">Kullanıcı Tipini Seçiniz</option>
+                    <option value="typeNormal">Normal</option>
+                    <option value="typeStudent">Öğrenci</option>
+                    <option value="typeDoctor">Doktor</option>
                   </select>
                 </div>
               </div>
