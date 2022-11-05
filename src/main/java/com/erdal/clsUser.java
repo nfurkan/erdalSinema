@@ -4,7 +4,12 @@
  */
 package com.erdal;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.sql.Timestamp;    
+import java.util.ArrayList;
 import java.util.Date;    
 
 /**
@@ -66,5 +71,82 @@ public class clsUser {
     public void setRegisterDate(Date registerDate) {
         this.registerDate = registerDate;
     }
+    
+    public void checkUser(){
+        
+        ArrayList<clsUser> userList = new ArrayList<clsUser>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from tbUsers");
+            while(rs.next()){
+                clsUser newUser = new clsUser();
+                newUser.setId(rs.getInt(1));
+                newUser.setName(rs.getString(2));
+                newUser.setPassword(rs.getString(3));
+                newUser.setType(rs.getString(4));
+                newUser.setMail(rs.getString(5));
+                newUser.setTelno(rs.getString(6));
+                newUser.setBirthDate(rs.getDate(7));
+                newUser.setRegisterDate(rs.getDate(8));
+                userList.add(newUser);
+            }
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    public void addUser(){
+        
+        ArrayList<clsUser> userList = new ArrayList<clsUser>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from tbUsers");
+            while(rs.next()){
+                clsUser newUser = new clsUser();
+                newUser.setId(rs.getInt(1));
+                newUser.setName(rs.getString(2));
+                newUser.setPassword(rs.getString(3));
+                newUser.setType(rs.getString(4));
+                newUser.setMail(rs.getString(5));
+                newUser.setTelno(rs.getString(6));
+                newUser.setBirthDate(rs.getDate(7));
+                newUser.setRegisterDate(rs.getDate(8));
+                userList.add(newUser);
+            }
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    /*public static void main(String[] args){
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from tbUsers");
+            while(rs.next()){
+                System.out.println(rs.getInt(1));
+                System.out.println(rs.getString(2));
+                System.out.println(rs.getString(3));
+                System.out.println(rs.getString(4));
+                System.out.println(rs.getString(5));
+                System.out.println(rs.getString(6));
+                System.out.println(rs.getDate(7));
+                System.out.println(rs.getTimestamp(8));
+            }
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }*/
     
 }
