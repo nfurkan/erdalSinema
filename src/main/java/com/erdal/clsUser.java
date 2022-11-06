@@ -101,27 +101,15 @@ public class clsUser {
     
     public void addUser(){
         
-        ArrayList<clsUser> userList = new ArrayList<clsUser>();
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+        String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `type`, `mail`, `telno`, `birthdate`, `registerdate`)" +
+                     "VALUES (NULL,'"+this.getName()+"','"+this.getPassword()+"','"+this.getType()+"','"+this.getMail()+"','"+this.getTelno()+"','"+this.getBirthDate()+"',CURRENT_TIMESTAMP)";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from tbUsers");
-            while(rs.next()){
-                clsUser newUser = new clsUser();
-                newUser.setId(rs.getInt(1));
-                newUser.setName(rs.getString(2));
-                newUser.setPassword(rs.getString(3));
-                newUser.setType(rs.getString(4));
-                newUser.setMail(rs.getString(5));
-                newUser.setTelno(rs.getString(6));
-                newUser.setBirthDate(rs.getDate(7));
-                newUser.setRegisterDate(rs.getDate(8));
-                userList.add(newUser);
-            }
+            stmt.execute(sql);
             con.close();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
