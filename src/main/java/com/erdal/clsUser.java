@@ -93,7 +93,7 @@ public class clsUser {
         }
     }
     
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
@@ -113,6 +113,6 @@ public class clsUser {
         catch (Exception e) {
             System.out.println(e);
         }
-    }
+    }*/
     
 }
