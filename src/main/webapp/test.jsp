@@ -17,11 +17,16 @@
     </head>
     <body>
         <%
-        /*String mail, password;
+            
+            /*      LOGIN
+        String mail, password;
         mail = request.getParameter("loginMail");
         password = request.getParameter("loginPassword");
         clsUser user = new clsUser();
-        out.println(Integer.toString(user.checkUser(mail, password)));*/
+        if(user.checkUser(mail, password))
+            out.println("Giriş başarılı.");*/
+        
+        
         String name, password, type, mail, telno;
         
         name = request.getParameter("name");
