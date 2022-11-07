@@ -114,7 +114,7 @@
     <section class="section section-sm section-first bg-default">
         <div class="container">
           <h3 class="heading-3">Erdal Sinemaya Katılın</h3>
-          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="login.jsp">
+          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="test.jsp">
             <div class="row row-20 gutters-20">
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
@@ -131,11 +131,11 @@
               <div class="col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
                   <!--Select 2-->
-                  <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
+                  <select name="type" class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
                     <option value="null">Kullanıcı Tipini Seçiniz</option>
-                    <option value="typeNormal">Normal</option>
-                    <option value="typeStudent">Öğrenci</option>
-                    <option value="typeDoctor">Doktor</option>
+                    <option value="tam">Tam</option>
+                    <option value="ogrenci">Öğrenci</option>
+                    <option value="doktor">Doktor</option>
                   </select>
                 </div>
               </div>
@@ -149,12 +149,6 @@
                 <div class="form-wrap wow slideInUp">
                   <input class="form-input" id="contact-telno-6" type="text" name="telno" data-constraints="@Required">
                   <label class="form-label" for="contact-telno-6">Telefon No (555-999-88-77)</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 oh-desktop">
-                <div class="form-wrap wow slideInUp">
-                  <input class="form-input" id="contact-birthDate-6" type="date" name="birthDate" data-constraints="@Required">
-                  <label class="form-label" for="contact-birthDate-6"></label>
                 </div>
               </div>
             </div>

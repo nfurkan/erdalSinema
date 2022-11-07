@@ -4,12 +4,7 @@
  */
 package com.erdal;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.sql.Timestamp;    
-import java.util.ArrayList;
+import java.sql.*;
 import java.util.Date;    
 
 /**
@@ -20,7 +15,6 @@ public class clsUser {
     
     int id;
     String name, password, type, mail, telno;
-    Date birthDate = new Date();
     Date registerDate = new Date();
 
     public int getId() {
@@ -59,12 +53,6 @@ public class clsUser {
     public void setTelno(String telno) {
         this.telno = telno;
     }
-    public Date getBirthDate() {
-        return birthDate;
-    }
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
     public Date getRegisterDate() {
         return registerDate;
     }
@@ -72,37 +60,27 @@ public class clsUser {
         this.registerDate = registerDate;
     }
     
-    public void checkUser(){
-        
-        ArrayList<clsUser> userList = new ArrayList<clsUser>();
+    public int checkUser(String mail, String password){
+        int checker = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from tbUsers");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM `tbUsers` LIMIT 0 , 30");
             while(rs.next()){
-                clsUser newUser = new clsUser();
-                newUser.setId(rs.getInt(1));
-                newUser.setName(rs.getString(2));
-                newUser.setPassword(rs.getString(3));
-                newUser.setType(rs.getString(4));
-                newUser.setMail(rs.getString(5));
-                newUser.setTelno(rs.getString(6));
-                newUser.setBirthDate(rs.getDate(7));
-                newUser.setRegisterDate(rs.getDate(8));
-                userList.add(newUser);
+                checker++;
             }
             con.close();
         }
         catch (Exception e) {
             System.out.println(e);
-        }
+        }return checker;
     }
     
     public void addUser(){
         
-        String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `type`, `mail`, `telno`, `birthdate`, `registerdate`)" +
-                     "VALUES (NULL,'"+this.getName()+"','"+this.getPassword()+"','"+this.getType()+"','"+this.getMail()+"','"+this.getTelno()+"','"+this.getBirthDate()+"',CURRENT_TIMESTAMP)";
+        String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `type`, `mail`, `telno`, `registerdate`)" +
+                     "VALUES (NULL,'"+this.getName()+"','"+this.getPassword()+"','"+this.getType()+"','"+this.getMail()+"','"+this.getTelno()+"',CURRENT_TIMESTAMP)";
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");

@@ -4,6 +4,8 @@
     Author     : PC
 --%>
 
+<%@page import="com.erdal.*"%>
+<%@page import="java.sql.*"%>
 <%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -104,7 +106,7 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#"><img src="images/login.png" alt=""></a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="register.jsp"><img src="images/login.png" alt=""></a>
                       </li>
                     </ul>
                   </div>
@@ -115,18 +117,16 @@
     <section class="section section-sm section-first bg-default">
         <div class="container">
           <h3 class="heading-3">Giriş Yap</h3>
-          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="filmlerim.html">
+          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="test.jsp">
             <div class="row row-20 gutters-20">
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
-                  <input class="form-input" id="contact-email-7" type="email" name="loginMail" data-constraints="@Email @Required">
-                  <label class="form-label" for="contact-your-name-7">E-Mail</label>
+                  <input class="form-input" id="userMail" type="email" name="loginMail" data-constraints="@Email @Required">
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
-                  <input class="form-input" id="contact-password-7" type="password" name="loginPassword" data-constraints="@Required">
-                  <label class="form-label" for="contact-password-7">Şifre</label>
+                  <input class="form-input" id="userPassword" type="password" name="loginPassword" data-constraints="@Required">
                 </div>
               </div>
             </div>
@@ -143,10 +143,6 @@
         </div>
       </section>
     <%
-        
-        String name, password, type, mail, telno;
-        Date birthDate = new Date();
-
     %>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
