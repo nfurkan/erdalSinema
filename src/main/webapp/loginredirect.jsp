@@ -17,32 +17,13 @@
     </head>
     <body>
         <%
-            
-            /*      LOGIN
         String mail, password;
         mail = request.getParameter("loginMail");
         password = request.getParameter("loginPassword");
+        out.println(mail + password);
         clsUser user = new clsUser();
         if(user.checkUser(mail, password))
-            out.println("Giriş başarılı.");*/
-        
-        
-        String name, password, type, mail, telno;
-        
-        name = request.getParameter("name");
-        password = request.getParameter("password");
-        mail = request.getParameter("email");
-        telno = request.getParameter("telno");
-        type = request.getParameter("type");
-        
-        clsUser newUser = new clsUser();
-        
-        newUser.setName(name);
-        newUser.setPassword(password);
-        newUser.setType(type);
-        newUser.setMail(mail);
-        newUser.setTelno(telno);
-        newUser.addUser();
+            out.println("Giriş başarılı.");
     %>
     </body>
 </html>
