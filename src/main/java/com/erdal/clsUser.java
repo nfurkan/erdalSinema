@@ -60,21 +60,22 @@ public class clsUser {
         this.registerDate = registerDate;
     }
     
-    public int checkUser(String mail, String password){
-        int checker = 0;
+    public boolean checkUser(String mail, String password){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM `tbUsers` LIMIT 0 , 30");
             while(rs.next()){
-                checker++;
+                if(rs.getString(5).equals(mail) && rs.getString(3).equals(password))
+                    return true;
             }
             con.close();
         }
         catch (Exception e) {
             System.out.println(e);
-        }return checker;
+        }
+        return false;
     }
     
     public void addUser(){
