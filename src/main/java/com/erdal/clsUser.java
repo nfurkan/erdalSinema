@@ -93,12 +93,12 @@ public class clsUser {
         }
     }
     
-    /*public static void main(String[] args){
+    public static void main(String[] args){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from tbUsers");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM `tbUsers` LIMIT 0 , 30");
             while(rs.next()){
                 System.out.println(rs.getInt(1));
                 System.out.println(rs.getString(2));
@@ -107,13 +107,12 @@ public class clsUser {
                 System.out.println(rs.getString(5));
                 System.out.println(rs.getString(6));
                 System.out.println(rs.getDate(7));
-                System.out.println(rs.getTimestamp(8));
             }
             con.close();
         }
         catch (Exception e) {
             System.out.println(e);
         }
-    }*/
+    }
     
 }

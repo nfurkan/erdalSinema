@@ -20,7 +20,6 @@
         String mail, password;
         mail = request.getParameter("loginMail");
         password = request.getParameter("loginPassword");
-        out.println(mail + password);
         clsUser user = new clsUser();
         if(user.checkUser(mail, password))
             out.println("Giriş başarılı.");
