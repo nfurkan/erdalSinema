@@ -95,15 +95,15 @@
                   <div class="rd-navbar-main">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Ana Sayfa</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Ana Sayfa</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">Vizyondakiler</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="vizyondakiler.html">Vizyondakiler</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Kampanyalar</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.html">Kampanyalar</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Filmlerim</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.html">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#"><img src="images/login.png" alt=""></a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş Yap</a>
                       </li>
                     </ul>
                   </div>
