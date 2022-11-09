@@ -128,17 +128,6 @@
                   <label class="form-label" for="contact-password-6">Şifre</label>
                 </div>
               </div>
-              <div class="col-lg-4 oh-desktop">
-                <div class="form-wrap wow slideInDown">
-                  <!--Select 2-->
-                  <select name="type" class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                    <option value="null">Kullanıcı Tipini Seçiniz</option>
-                    <option value="tam">Tam</option>
-                    <option value="ogrenci">Öğrenci</option>
-                    <option value="doktor">Doktor</option>
-                  </select>
-                </div>
-              </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
                   <input class="form-input" id="contact-password-6" type="email" name="email" data-constraints="@Email @Required">
@@ -149,6 +138,17 @@
                 <div class="form-wrap wow slideInUp">
                   <input class="form-input" id="contact-telno-6" type="text" name="telno" data-constraints="@Required">
                   <label class="form-label" for="contact-telno-6">Telefon No (555-999-88-77)</label>
+                </div>
+              </div>
+              <div class="col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInDown">
+                  <!--Select 2-->
+                  <select name="type" class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
+                    <option value="null">Kullanıcı Tipini Seçiniz</option>
+                    <option value="tam">Tam</option>
+                    <option value="ogrenci">Öğrenci</option>
+                    <option value="doktor">Doktor</option>
+                  </select>
                 </div>
               </div>
             </div>

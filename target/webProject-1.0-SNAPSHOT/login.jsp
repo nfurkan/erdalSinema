@@ -122,11 +122,13 @@
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
                   <input class="form-input" id="userMail" type="email" name="loginMail" data-constraints="@Email @Required">
+                  <label class="form-label" for="userMail">E-Mail</label>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
                   <input class="form-input" id="userPassword" type="password" name="loginPassword" data-constraints="@Required">
+                  <label class="form-label" for="userPassword">Şifre</label>
                 </div>
               </div>
             </div>

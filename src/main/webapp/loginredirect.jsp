@@ -4,6 +4,7 @@
     Author     : PC
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.erdal.*"%>
 <%@page import="java.sql.*"%>
@@ -17,12 +18,22 @@
     </head>
     <body>
         <%
+        clsUser user = new clsUser();
         String mail, password;
         mail = request.getParameter("loginMail");
         password = request.getParameter("loginPassword");
-        clsUser user = new clsUser();
-        if(user.checkUser(mail, password))
-            out.println("Giriş başarılı.");
+        if(user.checkUser(mail, password)){
+            
+            response.sendRedirect(request.getContextPath() + "/index.html");
+        
+        }
+            
+        else{
+            
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
+        
+        }
+            
     %>
     </body>
 </html>

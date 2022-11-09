@@ -5,6 +5,7 @@
 package com.erdal;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Date;    
 
 /**
@@ -14,9 +15,15 @@ import java.util.Date;
 public class clsUser {
     
     int id;
-    String name, password, type, mail, telno;
+    String name, password, type, mail, telno, temp;
     Date registerDate = new Date();
 
+    public String getTemp() {
+        return temp;
+    }
+    public void setTemp(String temp) {
+        this.temp = temp;
+    }
     public int getId() {
         return id;
     }
@@ -62,13 +69,13 @@ public class clsUser {
     
     public boolean checkUser(String mail, String password){
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM `tbUsers` LIMIT 0 , 30");
+            String sql = "SELECT * FROM `tbUsers` WHERE `mail` LIKE '" + mail + "' AND `password` LIKE '" + password + "' ";
+            ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
-                if(rs.getString(5).equals(mail) && rs.getString(3).equals(password))
-                    return true;
+                return true;
             }
             con.close();
         }
@@ -78,10 +85,37 @@ public class clsUser {
         return false;
     }
     
+    /*public ArrayList<clsUser> getUsers(){
+        ArrayList<clsUser> userList = new ArrayList<clsUser>();
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            String sql = "SELECT * FROM `tbUsers`";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                clsUser newUser = new clsUser();
+                newUser.setId(rs.getInt(1));
+                newUser.setName(rs.getString(2));
+                newUser.setPassword(rs.getString(3));
+                newUser.setMail(rs.getString(4));
+                newUser.setTelno(rs.getString(5));
+                newUser.setType(rs.getString(6));
+                newUser.setRegisterDate(rs.getDate(7));
+                userList.add(newUser);
+            }
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        return userList;
+    }*/
+    
     public void addUser(){
         
-        String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `type`, `mail`, `telno`, `registerdate`)" +
-                     "VALUES (NULL,'"+this.getName()+"','"+this.getPassword()+"','"+this.getType()+"','"+this.getMail()+"','"+this.getTelno()+"',CURRENT_TIMESTAMP)";
+        String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `mail`, `telno`, `type`, `registerdate`)" +
+                     "VALUES (NULL,'"+this.getName()+"','"+this.getPassword()+"','"+this.getMail()+"','"+this.getTelno()+"','"+this.getType()+"',CURRENT_TIMESTAMP)";
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
@@ -93,26 +127,15 @@ public class clsUser {
         }
     }
     
-    /*public static void main(String[] args){
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM `tbUsers` LIMIT 0 , 30");
-            while(rs.next()){
-                System.out.println(rs.getInt(1));
-                System.out.println(rs.getString(2));
-                System.out.println(rs.getString(3));
-                System.out.println(rs.getString(4));
-                System.out.println(rs.getString(5));
-                System.out.println(rs.getString(6));
-                System.out.println(rs.getDate(7));
-            }
-            con.close();
-        }
-        catch (Exception e) {
-            System.out.println(e);
-        }
-    }*/
+    @Override
+    public String toString() {
+        return (    " ID:"+this.getId()+
+                    " Name:"+this.getName()+
+                    " Password: "+ this.getPassword() +
+                    " Mail: "+ this.getMail() +
+                    " Telno : " + this.getTelno() +
+                    " Type : " + this.getType() +
+                    " RegisterDate : " + this.getRegisterDate());
+   }
     
 }
