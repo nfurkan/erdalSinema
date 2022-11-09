@@ -103,7 +103,7 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.html">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş Yap</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
                       </li>
                     </ul>
                   </div>
