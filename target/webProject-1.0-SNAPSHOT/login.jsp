@@ -141,6 +141,15 @@
                 </div>
               </article>
             </div>
+          </form><br><br><br>
+          <h3 class="heading-3">Kayıt Ol</h3><br><br>
+          <article class="quote-classic quote-classic-3 wow slideInDown">
+            <div class="quote-classic-text">
+                <p class="q">Siz de Erdal Sinemaya katılın!</p>
+            </div>
+          </article><br><br>
+          <form action='register.jsp' method='post'>
+          <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Kayıt Ol</button>
           </form>
         </div>
       </section>
