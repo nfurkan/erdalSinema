@@ -65,7 +65,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/erdallogo.png" width="198" height="66" alt=""/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.jsp"><img class="brand-logo-dark" src="images/erdallogo.png" width="198" height="66" alt=""/></a></div>
                 </div>
                 <div class="rd-navbar-right rd-navbar-nav-wrap">
                   <div class="rd-navbar-aside">
@@ -101,7 +101,7 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giri?</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giris</a>
                       </li>
                     </ul>
                   </div>
@@ -175,7 +175,7 @@
       <section class="section section-last bg-default">
           <br>
           <br>
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">V?ZYONDAK?LER</span></h3>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">VIZYONDAKILER</span></h3>
           <br>
           <br>
         <div class="container-fluid container-inset-0 isotope-wrap">

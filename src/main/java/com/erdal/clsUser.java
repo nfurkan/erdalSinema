@@ -85,33 +85,6 @@ public class clsUser {
         return false;
     }
     
-    /*public ArrayList<clsUser> getUsers(){
-        ArrayList<clsUser> userList = new ArrayList<clsUser>();
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
-            Statement stmt = con.createStatement();
-            String sql = "SELECT * FROM `tbUsers`";
-            ResultSet rs = stmt.executeQuery(sql);
-            while(rs.next()){
-                clsUser newUser = new clsUser();
-                newUser.setId(rs.getInt(1));
-                newUser.setName(rs.getString(2));
-                newUser.setPassword(rs.getString(3));
-                newUser.setMail(rs.getString(4));
-                newUser.setTelno(rs.getString(5));
-                newUser.setType(rs.getString(6));
-                newUser.setRegisterDate(rs.getDate(7));
-                userList.add(newUser);
-            }
-            con.close();
-        }
-        catch (Exception e) {
-            System.out.println(e);
-        }
-        return userList;
-    }*/
-    
     public void addUser(){
         
         String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `mail`, `telno`, `type`, `registerdate`)" +

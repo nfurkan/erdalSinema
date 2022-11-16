@@ -70,7 +70,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/erdallogo.png" alt=""/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.jsp"><img class="brand-logo-dark" src="images/erdallogo.png" alt=""/></a></div>
                 </div>
                 <div class="rd-navbar-right rd-navbar-nav-wrap">
                   <div class="rd-navbar-aside">
@@ -106,7 +106,7 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Giriş</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Giris</a>
                       </li>
                     </ul>
                   </div>
@@ -117,17 +117,19 @@
     <section class="section section-sm section-first bg-default">
         <div class="container">
           <h3 class="heading-3">Giriş Yap</h3>
-          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="loginredirect.jsp">
+          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="login.jsp">
             <div class="row row-20 gutters-20">
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
                   <input class="form-input" id="userMail" type="email" name="loginMail" data-constraints="@Email @Required">
+                  <%String mail = request.getParameter("loginMail");%>
                   <label class="form-label" for="userMail">E-Mail</label>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
                   <input class="form-input" id="userPassword" type="password" name="loginPassword" data-constraints="@Required">
+                  <%String password = request.getParameter("loginPassword");%>
                   <label class="form-label" for="userPassword">Şifre</label>
                 </div>
               </div>
@@ -154,6 +156,16 @@
         </div>
       </section>
     <%
+        clsUser user = new clsUser();
+        if(mail != null && password != null){
+        
+            if(user.checkUser(mail, password)){
+                response.sendRedirect(request.getContextPath() + "/index.jsp");
+            }
+            else{
+                response.sendRedirect(request.getContextPath() + "/login.jsp");
+            }
+        }
     %>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
