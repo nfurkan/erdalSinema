@@ -7,7 +7,7 @@
 <%@page import="com.erdal.*"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.Date"%>
-<jsp:useBean id="lab5" class="com.erdal.clsUser" scope="session"/>
+<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -157,11 +157,12 @@
         </div>
       </section>
     <%
-        clsUser user = new clsUser();
+        clsUser newUser = new clsUser();
         if(mail != null && password != null){
         
-            if(user.checkUser(mail, password)){
+            if(newUser.checkUser(mail, password)){
                 Cookie cookie = new Cookie("SESSIONID",user.sessionIdGenerator(mail));
+                user.setSessionId(user.sessionIdGenerator(mail));
                 cookie.setMaxAge(60*60*24);
                 response.addCookie(cookie);
                 response.sendRedirect(request.getContextPath() + "/index.jsp");

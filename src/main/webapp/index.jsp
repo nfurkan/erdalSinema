@@ -104,7 +104,7 @@
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
                       <%
-                            //if(user.getCookieId() != null){
+                            //if(user.getSessionId() != null){
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
                       </li>

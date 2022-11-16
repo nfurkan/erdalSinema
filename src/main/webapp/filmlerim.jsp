@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="lab5" class="com.erdal.clsUser" scope="session"/>
+<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <html class="wide wow-animation" lang="en">
   <head>
     <title>Contacts</title>

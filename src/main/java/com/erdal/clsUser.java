@@ -17,15 +17,15 @@ import java.util.Date;
 public class clsUser {
 
     int id;
-    String name, password, type, mail, telno, temp, cookieId;
+    String name, password, type, mail, telno, temp, sessionId;
     Date registerDate = new Date();
 
-    public String getCookieId() {
-        return cookieId;
+    public String getSessionId() {
+        return sessionId;
     }
 
-    public void setCookieId(String cookieId) {
-        this.cookieId = cookieId;
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
     }
 
     public String getTemp() {
