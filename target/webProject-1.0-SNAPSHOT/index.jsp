@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<jsp:useBean id="lab5" class="com.erdal.clsUser" scope="session"/>
+<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -103,8 +103,14 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
+                      <%
+                            //if(user.getCookieId() != null){
+                      %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
                       </li>
+                      <%
+                          //}
+                      %>
                     </ul>
                   </div>
                 </div>

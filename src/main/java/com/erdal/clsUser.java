@@ -4,91 +4,136 @@
  */
 package com.erdal;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.Date;    
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Date;
 
 /**
  *
  * @author PC
  */
 public class clsUser {
-    
+
     int id;
-    String name, password, type, mail, telno, temp;
+    String name, password, type, mail, telno, temp, cookieId;
     Date registerDate = new Date();
+
+    public String getCookieId() {
+        return cookieId;
+    }
+
+    public void setCookieId(String cookieId) {
+        this.cookieId = cookieId;
+    }
 
     public String getTemp() {
         return temp;
     }
+
     public void setTemp(String temp) {
         this.temp = temp;
     }
+
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getType() {
         return type;
     }
+
     public void setType(String type) {
         this.type = type;
     }
+
     public String getMail() {
         return mail;
     }
+
     public void setMail(String mail) {
         this.mail = mail;
     }
+
     public String getTelno() {
         return telno;
     }
+
     public void setTelno(String telno) {
         this.telno = telno;
     }
+
     public Date getRegisterDate() {
         return registerDate;
     }
+
     public void setRegisterDate(Date registerDate) {
         this.registerDate = registerDate;
     }
-    
-    public boolean checkUser(String mail, String password){
-        try{
+
+    public String sessionIdGenerator(String mail) {//mail almadan yapılabilir mi ?
+        
+        String sessionId = "";
+        
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            String sql = "SELECT * FROM `tbUsers` WHERE `mail` LIKE '" + mail + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                sessionId = rs.getInt(1) + rs.getString(2);
+                return sessionId;
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return sessionId;
+    }
+
+    public boolean checkUser(String mail, String password) {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
             Statement stmt = con.createStatement();
             String sql = "SELECT * FROM `tbUsers` WHERE `mail` LIKE '" + mail + "' AND `password` LIKE '" + password + "' ";
             ResultSet rs = stmt.executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 return true;
             }
             con.close();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e);
         }
         return false;
     }
-    
-    public void addUser(){
-        
-        String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `mail`, `telno`, `type`, `registerdate`)" +
-                     "VALUES (NULL,'"+this.getName()+"','"+this.getPassword()+"','"+this.getMail()+"','"+this.getTelno()+"','"+this.getType()+"',CURRENT_TIMESTAMP)";
+
+    public void addUser() {
+
+        String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `mail`, `telno`, `type`, `registerdate`)"
+                + "VALUES (NULL,'" + this.getName() + "','" + this.getPassword() + "','" + this.getMail() + "','" + this.getTelno() + "','" + this.getType() + "',CURRENT_TIMESTAMP)";
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
@@ -99,16 +144,16 @@ public class clsUser {
             System.out.println(e);
         }
     }
-    
+
     @Override
     public String toString() {
-        return (    " ID:"+this.getId()+
-                    " Name:"+this.getName()+
-                    " Password: "+ this.getPassword() +
-                    " Mail: "+ this.getMail() +
-                    " Telno : " + this.getTelno() +
-                    " Type : " + this.getType() +
-                    " RegisterDate : " + this.getRegisterDate());
-   }
-    
+        return (" ID:" + this.getId()
+                + " Name:" + this.getName()
+                + " Password: " + this.getPassword()
+                + " Mail: " + this.getMail()
+                + " Telno : " + this.getTelno()
+                + " Type : " + this.getType()
+                + " RegisterDate : " + this.getRegisterDate());
+    }
+
 }

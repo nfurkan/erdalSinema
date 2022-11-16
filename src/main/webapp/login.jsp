@@ -161,6 +161,9 @@
         if(mail != null && password != null){
         
             if(user.checkUser(mail, password)){
+                Cookie cookie = new Cookie("SESSIONID",user.sessionIdGenerator(mail));
+                cookie.setMaxAge(60*60*24);
+                response.addCookie(cookie);
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
             }
             else{
