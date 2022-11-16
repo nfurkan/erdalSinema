@@ -3,7 +3,7 @@
     Created on : Oct 23, 2022, 5:24:14 PM
     Author     : PC
 --%>
-
+<jsp:useBean id="lab5" class="com.erdal.clsUser" scope="session"/>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

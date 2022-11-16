@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html class="wide wow-animation" lang="en">
   <head>
     <title>Vizyondakiler</title>
@@ -182,7 +183,7 @@
         </div>
         <div class="container">
           <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">ANA SAYFAYA DÖN</a></li>
+            <li><a href="index.html">ANA SAYFAYA DÃ–N</a></li>
             <li class="active">V?ZYONDAK?LER</li>
           </ul>
         </div>
@@ -193,8 +194,8 @@
             <div class="col-lg-4 col-xl-3">
               <h5 class="text-spacing-200 text-capitalize">F?LM L?STES?</h5>
               <ul class="nav list-category list-category-down-md-inline-block">
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">YÜZÜKLER?N EFEND?S? - KRALIN DÖNÜ?Ü</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">DÖVÜ? KULÜBÜ</a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">YÃœZÃœKLER?N EFEND?S? - KRALIN DÃ–NÃœ?Ãœ</a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">DÃ–VÃœ? KULÃœBÃœ</a></li>
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">ER RYAN'I KURTARMAK</a></li>
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-4" data-toggle="tab">LEON</a></li>
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-5" data-toggle="tab">YILDIZLAR ARASI</a></li>
@@ -206,17 +207,17 @@
               <!-- Tab panes-->
               <div class="tab-content tab-content-1">
                 <div class="tab-pane fade show active" id="tabs-4-1">
-                  <h4>YÜZÜKLER?N EFEND?S? - KRALIN DÖNÜ?Ü</h4>
-                  <p>Yüzüklerin Efendisi: Kral?n Dönü?ü, Peter Jackson'?n yönetmenli?ini yapt???, J. R. R. Tolkien'in Yüzüklerin Efendisi kitaplar?n?n ikinci ve üçüncü bölümlerinden uyarlanan 2003 y?l?nda gösterime giren fantezi filmidir. Yüzüklerin Efendisi film serisinin Yüzük Karde?li?i ve ?ki Kule'den sonra üçüncü filmidir.</p>
-                  <p>Gösterime giri? tarihi: 19 Aral?k 2003 (Türkiye)</p><img src="images/yuzuklerinefendisi.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: Peter Jackson</p>
+                  <h4>YÃœZÃœKLER?N EFEND?S? - KRALIN DÃ–NÃœ?Ãœ</h4>
+                  <p>YÃ¼zÃ¼klerin Efendisi: Kral?n DÃ¶nÃ¼?Ã¼, Peter Jackson'?n yÃ¶netmenli?ini yapt???, J. R. R. Tolkien'in YÃ¼zÃ¼klerin Efendisi kitaplar?n?n ikinci ve Ã¼Ã§Ã¼ncÃ¼ bÃ¶lÃ¼mlerinden uyarlanan 2003 y?l?nda gÃ¶sterime giren fantezi filmidir. YÃ¼zÃ¼klerin Efendisi film serisinin YÃ¼zÃ¼k Karde?li?i ve ?ki Kule'den sonra Ã¼Ã§Ã¼ncÃ¼ filmidir.</p>
+                  <p>GÃ¶sterime giri? tarihi: 19 Aral?k 2003 (TÃ¼rkiye)</p><img src="images/yuzuklerinefendisi.jpg" alt="" width="835" height="418"/>
+                  <p>YÃ¶netmeni: Peter Jackson</p>
                   <p>Kategoriler: Aksiyon, Macera, Fantezi, ?iddet
                 </div>
                 <div class="tab-pane fade" id="tabs-4-2">
-                  <h4>DÖVÜ? KULÜBÜ</h4>
-                  <p>Dövü? Kulübü, Chuck Palahniuk taraf?ndan yaz?lm?? ayn? isimli romandan uyarlanan kült filmdir. 1999 yap?m? olan film, David Fincher taraf?ndan yönetilmi?tir ve ba?rollerde Brad Pitt, Edward Norton ve Helena Bonham Carter rol alm??t?r. Müziklerini Dust Brothers yapm??t?r.</p>
-                  <p>Gösterime giri? tarihi: 10 Aral?k 1999 (Türkiye)</p><img src="images/fightclub2.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: David Fincher</p>
+                  <h4>DÃ–VÃœ? KULÃœBÃœ</h4>
+                  <p>DÃ¶vÃ¼? KulÃ¼bÃ¼, Chuck Palahniuk taraf?ndan yaz?lm?? ayn? isimli romandan uyarlanan kÃ¼lt filmdir. 1999 yap?m? olan film, David Fincher taraf?ndan yÃ¶netilmi?tir ve ba?rollerde Brad Pitt, Edward Norton ve Helena Bonham Carter rol alm??t?r. MÃ¼ziklerini Dust Brothers yapm??t?r.</p>
+                  <p>GÃ¶sterime giri? tarihi: 10 Aral?k 1999 (TÃ¼rkiye)</p><img src="images/fightclub2.jpg" alt="" width="835" height="418"/>
+                  <p>YÃ¶netmeni: David Fincher</p>
                   <p>Kategoriler: Aksiyon, ?iddet, Vah?et, Psikilojik
                 </div>
                 <div class="tab-pane fade" id="tabs-4-3">
@@ -253,7 +254,7 @@
        <!-- Our Shop-->
       <section class="section section-lg bg-default">
         <div class="container">
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">ÇOK SATANLAR</span></h3>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">Ã‡OK SATANLAR</span></h3>
           <div class="row row-lg row-30">
             <div class="col-sm-6 col-lg-4 col-xl-3">
               <!-- Product-->
@@ -268,7 +269,7 @@
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e GÃ¶z At</a></div>
                 </div>
               </article>
             </div>
@@ -285,7 +286,7 @@
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e GÃ¶z At</a></div>
                 </div><span class="product-badge product-badge-new">Yeni</span>
               </article>
             </div>
@@ -302,7 +303,7 @@
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e GÃ¶z At</a></div>
                 </div>
               </article>
             </div>
@@ -320,7 +321,7 @@
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e GÃ¶z At</a></div>
                 </div><span class="product-badge product-badge-sale">Kampanya</span>
               </article>
             </div>
@@ -389,49 +390,49 @@
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
-                  <p class="q">Gerçekten de sevdi?im türler aras?ndan bir film seçilmi?, bu hizmetten çok memnun kald?m!</p>
+                  <p class="q">GerÃ§ekten de sevdi?im tÃ¼rler aras?ndan bir film seÃ§ilmi?, bu hizmetten Ã§ok memnun kald?m!</p>
                 </div>
                 <div class="quote-tara-figure"><img src="images/user-6-115x115.jpg" alt="" width="115" height="115"/>
                 </div>
               </div>
               <h6 class="quote-tara-author">Kullan?c? - 1</h6>
-              <div class="quote-tara-status">Üye</div>
+              <div class="quote-tara-status">Ãœye</div>
             </article>
             <!-- Quote Tara-->
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
-                  <p class="q">Normalde çok zor film be?enirim ama buna bay?ld?m! Tam zevkime hitap ediyor...</p>
+                  <p class="q">Normalde Ã§ok zor film be?enirim ama buna bay?ld?m! Tam zevkime hitap ediyor...</p>
                 </div>
                 <div class="quote-tara-figure"><img src="images/user-8-115x115.jpg" alt="" width="115" height="115"/>
                 </div>
               </div>
               <h6 class="quote-tara-author">Kullan?c? - 2</h6>
-              <div class="quote-tara-status">Üye</div>
+              <div class="quote-tara-status">Ãœye</div>
             </article>
             <!-- Quote Tara-->
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
-                  <p class="q">Bazen film seçmekte çok zorlan?yorum, sa?olsun erdal sinema benim yerime seçmi?, mükemmel!</p>
+                  <p class="q">Bazen film seÃ§mekte Ã§ok zorlan?yorum, sa?olsun erdal sinema benim yerime seÃ§mi?, mÃ¼kemmel!</p>
                 </div>
                 <div class="quote-tara-figure"><img src="images/user-7-115x115.jpg" alt="" width="115" height="115"/>
                 </div>
               </div>
               <h6 class="quote-tara-author">Kullan?c? - 3</h6>
-              <div class="quote-tara-status">Üye</div>
+              <div class="quote-tara-status">Ãœye</div>
             </article>
             <!-- Quote Tara-->
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
-                  <p class="q">Film sevdi?im türlere hitap ediyordu ama s?k?ld?m...</p>
+                  <p class="q">Film sevdi?im tÃ¼rlere hitap ediyordu ama s?k?ld?m...</p>
                 </div>
                 <div class="quote-tara-figure"><img src="images/user-9-115x115.jpg" alt="" width="115" height="115"/>
                 </div>
               </div>
               <h6 class="quote-tara-author">Kullan?c? - 4</h6>
-              <div class="quote-tara-status">Üye</div>
+              <div class="quote-tara-status">Ãœye</div>
             </article>
           </div>
         </div>

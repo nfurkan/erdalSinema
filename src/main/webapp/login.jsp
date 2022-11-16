@@ -3,11 +3,11 @@
     Created on : Oct 23, 2022, 5:24:14 PM
     Author     : PC
 --%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="com.erdal.*"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.Date"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="lab5" class="com.erdal.clsUser" scope="session"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -105,6 +105,7 @@
                       <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
+                      
                       </li>
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Giris</a>
                       </li>

@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<jsp:useBean id="lab5" class="com.erdal.clsUser" scope="session"/>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html class="wide wow-animation" lang="en">
   <head>
     <title>Ana Sayfa</title>
@@ -73,7 +75,7 @@
                       <li>
                         <div class="unit unit-spacing-xs">
                           <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                          <div class="unit-body"><a class="phone" href="tel:#">Erdal ?leti?im Hatt? - 05XX-XXX-XX-XX</a></div>
+                          <div class="unit-body"><a class="phone" href="tel:#">Erdal Ä°letiÅŸim HattÄ± - 05XX-XXX-XX-XX</a></div>
                         </div>
                       </li>
                       <li>
@@ -101,7 +103,7 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giris</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">GiriÅŸ</a>
                       </li>
                     </ul>
                   </div>
@@ -175,7 +177,7 @@
       <section class="section section-last bg-default">
           <br>
           <br>
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">VIZYONDAKILER</span></h3>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">VÄ°ZYONDAKÄ°LER</span></h3>
           <br>
           <br>
         <div class="container-fluid container-inset-0 isotope-wrap">
@@ -185,7 +187,7 @@
               <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft"><a class="thumbnail-mary-figure" href="images/gallery-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/lotrkapak.jpg" alt="" width="310" height="585"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">YÜZÜKLER?N EFEND?S? - ?K? KULE</a></h6>
+                    <h6 class="thumbnail-mary-title"><a href="#">YÃœZÃœKLERÄ°N EFENDÄ°SÄ° - ?K? KULE</a></h6>
                     <div class="thumbnail-mary-location">MACERA</div>
                   </div>
                 </div>
@@ -196,7 +198,7 @@
               <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="images/gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/fightclub.jpg" alt="" width="631" height="587"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">DÖVÜ? KULÜBÜ</a></h6>
+                    <h6 class="thumbnail-mary-title"><a href="#">DÃ–VÃœ? KULÃœBÃœ</a></h6>
                     <div class="thumbnail-mary-location">??DDET</div>
                   </div>
                 </div>
@@ -241,7 +243,7 @@
                 <div class="thumbnail-mary-caption">
                   <div>
                     <h6 class="thumbnail-mary-title"><a href="#">EL CAMINO</a></h6>
-                    <div class="thumbnail-mary-location">SUÇ</div>
+                    <div class="thumbnail-mary-location">SUÃ‡</div>
                   </div>
                 </div>
               </article>
@@ -264,7 +266,7 @@
       <!-- Our Team-->
       <section class="section section-lg section-bottom-md-70 bg-default">
         <div class="container">
-          <h3 class="oh"><span class="d-inline-block wow slideInUp" data-wow-delay="0s">ÇOK YAKINDA</span></h3>
+          <h3 class="oh"><span class="d-inline-block wow slideInUp" data-wow-delay="0s">Ã‡OK YAKINDA</span></h3>
           <div class="row row-lg row-40 justify-content-center">
             <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".2s" data-wow-duration="1s">
               <!-- Team Modern-->
@@ -288,7 +290,7 @@
               <!-- Team Modern-->
               <article class="team-modern"><a class="team-modern-figure" href="#"><img src="images/joker2.jpg" alt="" width="270" height="236"/></a>
                 <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Joker: FOLIE Â DEUX</a></h6>
+                  <h6 class="team-modern-name"><a href="#">Joker: FOLIE Ã‚ DEUX</a></h6>
                   <div class="team-modern-status">2024</div>
                 </div>
               </article>
@@ -326,7 +328,7 @@
       <!-- What We Offer-->
       <section class="section section-md bg-default">
         <div class="container">
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">F?LM TÜRLER?</span></h3>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">F?LM TÃœRLER?</span></h3>
           <div class="row row-md row-30">
             <div class="col-sm-6 col-lg-4">
               <div class="oh-desktop">
@@ -335,7 +337,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-gun"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 1</a></h5> <!-- 1.s?ra 1.resim -->
+                    <h5 class="services-terri-title"><a href="#">Film TÃ¼rÃ¼ - 1</a></h5> <!-- 1.s?ra 1.resim -->
                   </div>
                 </article>
               </div>
@@ -347,7 +349,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-star"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 2</a></h5> <!-- 1.s?ra 2.resim -->
+                    <h5 class="services-terri-title"><a href="#">Film TÃ¼rÃ¼ - 2</a></h5> <!-- 1.s?ra 2.resim -->
                   </div>
                 </article>
               </div>
@@ -359,7 +361,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-hamburger"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 3</a></h5> <!-- 1.s?ra 3.resim -->
+                    <h5 class="services-terri-title"><a href="#">Film TÃ¼rÃ¼ - 3</a></h5> <!-- 1.s?ra 3.resim -->
                   </div>
                 </article>
               </div>
@@ -371,7 +373,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-ice-cream"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 4</a></h5> <!-- 2.s?ra 1.resim -->
+                    <h5 class="services-terri-title"><a href="#">Film TÃ¼rÃ¼ - 4</a></h5> <!-- 2.s?ra 1.resim -->
                   </div>
                 </article>
               </div>
@@ -383,7 +385,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-coffee-cup"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 5</a></h5> <!-- 2.s?ra 2.resim -->
+                    <h5 class="services-terri-title"><a href="#">Film TÃ¼rÃ¼ - 5</a></h5> <!-- 2.s?ra 2.resim -->
                   </div>
                 </article>
               </div>
@@ -395,7 +397,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-steak"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 6</a></h5> <!-- 2.s?ra 3.resim -->
+                    <h5 class="services-terri-title"><a href="#">Film TÃ¼rÃ¼ - 6</a></h5> <!-- 2.s?ra 3.resim -->
                   </div>
                 </article>
               </div>
@@ -411,9 +413,9 @@
             <div class="row justify-content-end">
               <div class="col-sm-8 col-md-7 col-lg-5">
                 <div class="cta-modern">
-                  <h3 class="cta-modern-title wow fadeInRight">Haftan?n En Çok Be?enilen Filmi</h3>
-                  <p class="lead">Film özeti...</p>
-                  <p class="cta-modern-text oh-desktop" data-wow-delay=".1s"><span class="cta-modern-decor wow slideInLeft"></span><span class="d-inline-block wow slideInDown">Yönetmen : Erdal, Yap?mc?: Erdal Yap?m</span></p><a class="button button-md button-secondary-2 button-winona wow fadeInUp" href="#" data-wow-delay=".2s">Devam?na Göz At</a>
+                  <h3 class="cta-modern-title wow fadeInRight">Haftan?n En Ã‡ok Be?enilen Filmi</h3>
+                  <p class="lead">Film Ã¶zeti...</p>
+                  <p class="cta-modern-text oh-desktop" data-wow-delay=".1s"><span class="cta-modern-decor wow slideInLeft"></span><span class="d-inline-block wow slideInDown">YÃ¶netmen : Erdal, Yap?mc?: Erdal Yap?m</span></p><a class="button button-md button-secondary-2 button-winona wow fadeInUp" href="#" data-wow-delay=".2s">Devam?na GÃ¶z At</a>
                 </div>
               </div>
             </div>
@@ -430,8 +432,8 @@
             <div class="row justify-content-end">
               <div class="col-sm-9 col-md-7 col-lg-5">
                 <div class="cta-modern">
-                  <h3 class="cta-modern-title cta-modern-title-2 oh-desktop"><span class="d-inline-block wow fadeInLeft">Sizin ?çin Seçtik</span></h3>
-                  <p class="cta-modern-text cta-modern-text-2 oh-desktop" data-wow-delay=".1s"><span class="cta-modern-decor cta-modern-decor-2 wow slideInLeft"></span><span class="d-inline-block wow slideInUp">Film zevkinizi dikkate alarak size özel seçti?imiz filmi kaç?rmay?n!</span></p><a class="button button-lg button-secondary button-winona wow fadeInRight" href="contacts.html" data-wow-delay=".2s">Göz At</a>
+                  <h3 class="cta-modern-title cta-modern-title-2 oh-desktop"><span class="d-inline-block wow fadeInLeft">Sizin ?Ã§in SeÃ§tik</span></h3>
+                  <p class="cta-modern-text cta-modern-text-2 oh-desktop" data-wow-delay=".1s"><span class="cta-modern-decor cta-modern-decor-2 wow slideInLeft"></span><span class="d-inline-block wow slideInUp">Film zevkinizi dikkate alarak size Ã¶zel seÃ§ti?imiz filmi kaÃ§?rmay?n!</span></p><a class="button button-lg button-secondary button-winona wow fadeInRight" href="contacts.html" data-wow-delay=".2s">GÃ¶z At</a>
                 </div>
               </div>
             </div>
@@ -464,10 +466,10 @@
                 <div class="form-wrap wow slideInDown">
                   <!--Select 2-->
                   <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                    <option value="1">Kategori Seçin</option>
+                    <option value="1">Kategori SeÃ§in</option>
                     <option value="2">?stek</option>
                     <option value="3">?ikayet</option>
-                    <option value="4">Görü?</option>
+                    <option value="4">GÃ¶rÃ¼?</option>
                   </select>
                 </div>
               </div>
@@ -479,11 +481,11 @@
               </div>
             </div>
             <div class="group-custom-1 group-middle oh-desktop">
-              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Gönder</button>
+              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">GÃ¶nder</button>
               <!-- Quote Classic-->
               <article class="quote-classic quote-classic-3 wow slideInDown">
                 <div class="quote-classic-text">
-                  <p class="q">Lütfen mesajlar?n?zda topluluk kurallar?na uyunuz.</p>
+                  <p class="q">LÃ¼tfen mesajlar?n?zda topluluk kurallar?na uyunuz.</p>
                 </div>
               </article>
             </div>
@@ -513,14 +515,14 @@
               <div class="box-icon-megan-header">
                 <div class="box-icon-megan-icon linearicons-radar"></div>
               </div>
-              <h5 class="box-icon-megan-title"><a href="#">Güncel Teknolojiler</a></h5>
-              <p class="box-icon-megan-text">Kulland???m?z güncek teknolojilerle birlikte film seyriniz e?siz bir deneyime dönü?ecek!</p>
+              <h5 class="box-icon-megan-title"><a href="#">GÃ¼ncel Teknolojiler</a></h5>
+              <p class="box-icon-megan-text">Kulland???m?z gÃ¼ncek teknolojilerle birlikte film seyriniz e?siz bir deneyime dÃ¶nÃ¼?ecek!</p>
             </article>
             <article class="box-icon-megan wow fadeInUp" data-wow-delay=".15s">
               <div class="box-icon-megan-header">
                 <div class="box-icon-megan-icon linearicons-thumbs-up"></div>
               </div>
-              <h5 class="box-icon-megan-title"><a href="#">Mü?teri Memnuniyeti</a></h5>
+              <h5 class="box-icon-megan-title"><a href="#">MÃ¼?teri Memnuniyeti</a></h5>
               <p class="box-icon-megan-text">7-24 deste?e haz?r?z!</p>
             </article>
           </div>
