@@ -103,13 +103,29 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
+                      <%    
+                            boolean loginSuccess = false;
+                            Cookie cookie= null;
+                            Cookie[] cookies= null;
+                            cookies= request.getCookies();
+                            for(int i = 0; i < cookies.length; i++){
+                                cookie= cookies[i];
+                                if(cookie.getValue() != null){
+                                    loginSuccess = true;
+                                    break;}
+                            }
+                            if(loginSuccess){
+                      %>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Sepetim</a>
+                      </li>
                       <%
-                            //if(user.getSessionId() != null){
+                          }
+                          else{
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
                       </li>
                       <%
-                          //}
+                          }
                       %>
                     </ul>
                   </div>

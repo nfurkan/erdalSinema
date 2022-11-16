@@ -92,7 +92,8 @@ public class clsUser {
         this.registerDate = registerDate;
     }
 
-    public String sessionIdGenerator(String mail) {//mail almadan yapılabilir mi ?
+    public String sessionIdGenerator(String mail) {//mail almadan yapılabilir mi ? + vizyondakiler güncellensin mi otomatik her hafta
+        //cookie kontrolünde sessionid nin tutup tutmaması önemli mi yoksa sadece içi null veya değil yeterli mi
         
         String sessionId = "";
         
