@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.erdal.*"%>
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
@@ -54,6 +56,13 @@
       </div>
     </div>
     <div class="page">
+    <%
+        
+        clsMovie movie = new clsMovie();
+        ArrayList<clsMovie> movies = new ArrayList<clsMovie>();
+        movies = movie.getMovies();
+
+    %>
       <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
@@ -185,7 +194,7 @@
         <div class="container">
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.html">ANA SAYFAYA DÖN</a></li>
-            <li class="active">V?ZYONDAK?LER</li>
+            <li class="active">VİZYONDAKİLER</li>
           </ul>
         </div>
       </section>
@@ -193,58 +202,72 @@
         <div class="container">
           <div class="tabs-custom row row-50 justify-content-center flex-lg-row-reverse text-center text-md-left" id="tabs-4">
             <div class="col-lg-4 col-xl-3">
-              <h5 class="text-spacing-200 text-capitalize">F?LM L?STES?</h5>
+              <h5 class="text-spacing-200 text-capitalize">FİLM LİSTESİ</h5>
               <ul class="nav list-category list-category-down-md-inline-block">
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">YÜZÜKLER?N EFEND?S? - KRALIN DÖNÜ?Ü</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">DÖVÜ? KULÜBÜ</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">ER RYAN'I KURTARMAK</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-4" data-toggle="tab">LEON</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-5" data-toggle="tab">YILDIZLAR ARASI</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-6" data-toggle="tab">EL CAMINO</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">CADILAR BAYRAMI</a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">
+                <%out.println(movies.get(0).getName());%>
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">
+                <%out.println(movies.get(1).getName());%>
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">
+                <%out.println(movies.get(2).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-4" data-toggle="tab">
+                <%out.println(movies.get(3).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-5" data-toggle="tab">
+                <%out.println(movies.get(4).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-6" data-toggle="tab">
+                <%out.println(movies.get(5).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">
+                <%out.println(movies.get(6).getName());%>    
+                </a></li>
               </ul><a class="button button-xl button-primary button-winona" href="contacts.html">B?LET AL</a>
             </div>
             <div class="col-lg-8 col-xl-9">
               <!-- Tab panes-->
               <div class="tab-content tab-content-1">
                 <div class="tab-pane fade show active" id="tabs-4-1">
-                  <h4>YÜZÜKLER?N EFEND?S? - KRALIN DÖNÜ?Ü</h4>
-                  <p>Yüzüklerin Efendisi: Kral?n Dönü?ü, Peter Jackson'?n yönetmenli?ini yapt???, J. R. R. Tolkien'in Yüzüklerin Efendisi kitaplar?n?n ikinci ve üçüncü bölümlerinden uyarlanan 2003 y?l?nda gösterime giren fantezi filmidir. Yüzüklerin Efendisi film serisinin Yüzük Karde?li?i ve ?ki Kule'den sonra üçüncü filmidir.</p>
+                  <h4><%out.println(movies.get(0).getName());%></h4>
+                  <p><%out.println(movies.get(0).getSummary());%></p>
                   <p>Gösterime giri? tarihi: 19 Aral?k 2003 (Türkiye)</p><img src="images/yuzuklerinefendisi.jpg" alt="" width="835" height="418"/>
                   <p>Yönetmeni: Peter Jackson</p>
-                  <p>Kategoriler: Aksiyon, Macera, Fantezi, ?iddet
+                  <p>Kategoriler: Aksiyon, Macera, Fantezi, ?iddet</p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-2">
-                  <h4>DÖVÜ? KULÜBÜ</h4>
-                  <p>Dövü? Kulübü, Chuck Palahniuk taraf?ndan yaz?lm?? ayn? isimli romandan uyarlanan kült filmdir. 1999 yap?m? olan film, David Fincher taraf?ndan yönetilmi?tir ve ba?rollerde Brad Pitt, Edward Norton ve Helena Bonham Carter rol alm??t?r. Müziklerini Dust Brothers yapm??t?r.</p>
+                  <h4><%out.println(movies.get(1).getName());%></h4>
+                  <p><%out.println(movies.get(1).getSummary());%></p>
                   <p>Gösterime giri? tarihi: 10 Aral?k 1999 (Türkiye)</p><img src="images/fightclub2.jpg" alt="" width="835" height="418"/>
                   <p>Yönetmeni: David Fincher</p>
-                  <p>Kategoriler: Aksiyon, ?iddet, Vah?et, Psikilojik
+                  <p>Kategoriler: Aksiyon, ?iddet, Vah?et, Psikilojik</p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-3">
-                  <h4>Providing Top-notch Customer Service</h4>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
-                  <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <h4><%out.println(movies.get(2).getName());%></h4>
+                  <p><%out.println(movies.get(2).getSummary());%></p>
+                  <p>Lotus </p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-4">
-                  <h4>Integrity & Dedication</h4>
-                  <p>Albus, dexter particulas grauiter consumere de ferox, bi-color abactus. Impositios studere, tanquam mirabilis hippotoxota. Cur torus manducare? Pol, vox! Cum barcas nocere, omnes specieses contactus</p>
-                  <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <h4><%out.println(movies.get(3).getName());%></h4>
+                  <p><%out.println(movies.get(3).getSummary());%></p>
+                  <p>Lotus ao scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-5">
-                  <h4>Integrity & Dedication</h4>
-                  <p>Albus, dexter particulas grauiter consumere de ferox, bi-color abactus. Impositios studere, tanquam mirabilis hippotoxota. Cur torus manducare? Pol, vox! Cum barcas nocere, omnes specieses contactus</p>
-                  <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <h4><%out.println(movies.get(4).getName());%></h4>
+                  <p><%out.println(movies.get(4).getSummary());%></p>
+                  <p>Lotus ascutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-6">
-                  <h4>Integrity & Dedication</h4>
-                  <p>Albus, dexter particulas grauiter consumere de ferox, bi-color abactus. Impositios studere, tanquam mirabilis hippotoxota. Cur torus manducare? Pol, vox! Cum barcas nocere, omnes specieses contactus</p>
-                  <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <h4><%out.println(movies.get(5).getName());%></h4>
+                  <p></p>
+                  <p>Lotus advenaso scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-7">
-                  <h4>Integrity & Dedication</h4>
-                  <p>Albus, dexter particulas grauiter consumere de ferox, bi-color abactus. Impositios studere, tanquam mirabilis hippotoxota. Cur torus manducare? Pol, vox! Cum barcas nocere, omnes specieses contactus</p>
-                  <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <h4><%out.println(movies.get(6).getName());%></h4>
+                  <p>Albus, dexter par        ctus</p>
+                  <p>Lotus advena scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
                 </div>
               </div>
             </div>
