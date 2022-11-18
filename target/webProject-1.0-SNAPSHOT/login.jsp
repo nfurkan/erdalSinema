@@ -107,7 +107,7 @@
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Giris</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Giriş</a>
                       </li>
                     </ul>
                   </div>

@@ -109,31 +109,33 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
-                      </li>
-                      <%    
-                            boolean loginSuccess = false;
+                      <%
+                          boolean loginSuccess = false;
                             Cookie cookie= null;
                             Cookie[] cookies= null;
                             cookies= request.getCookies();
                             for(int i = 0; i < cookies.length; i++){
                                 cookie= cookies[i];
-                                if(cookie.getValue() != null){
+                                if(cookie.getName().equals("SESSIONID") && cookie.getValue() != null){
                                     loginSuccess = true;
                                     break;}
                             }
                             if(loginSuccess){
                       %>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Sepetim</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.jsp">Sepetim</a>
                       </li>
                       <%
-                          }
-                          else{
+                            }
+                            else{
                       %>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Filmlerim</a>
+                      </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
                       </li>
                       <%
-                          }
+                            }
                       %>
                     </ul>
                   </div>
@@ -225,7 +227,7 @@
             </div>
             <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp#tabs-4-2" data-lightgallery="item"><img src="images/fightclub.jpg" alt="" width="631" height="587"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp" data-lightgallery="item"><img src="images/fightclub.jpg" alt="" width="631" height="587"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
                     <h6 class="thumbnail-mary-title"><a href="vizyondakiler.jsp#tabs-4-2"><%out.println(movies.get(0).getName());%></a></h6>
