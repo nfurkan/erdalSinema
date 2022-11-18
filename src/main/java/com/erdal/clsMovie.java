@@ -14,11 +14,22 @@ import java.util.Date;
  */
 public class clsMovie {
     
-    int id, ageRestriction, screenTime, published;
-    String name, director, actors, format, type, summary;
+    int id, ageRestriction, screenTime, published, saleAmount;
+    String name, director, actors, format, category, summary, publishDate, pictureName;
     float point;
-    Date publishDate;
 
+    public int getSaleAmount() {
+        return saleAmount;
+    }
+    public void setSaleAmount(int saleAmount) {
+        this.saleAmount = saleAmount;
+    }
+    public String getPictureName() {
+        return pictureName;
+    }
+    public void setPictureName(String pictureName) {
+        this.pictureName = pictureName;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -67,11 +78,11 @@ public class clsMovie {
     public void setFormat(String format) {
         this.format = format;
     }
-    public String getType() {
-        return type;
+    public String getCategory() {
+        return category;
     }
-    public void setType(String type) {
-        this.type = type;
+    public void setCategory(String category) {
+        this.category = category;
     }
     public String getSummary() {
         return summary;
@@ -85,10 +96,10 @@ public class clsMovie {
     public void setPoint(float point) {
         this.point = point;
     }
-    public Date getPublishDate() {
+    public String getPublishDate() {
         return publishDate;
     }
-    public void setPublishDate(Date publishDate) {
+    public void setPublishDate(String publishDate) {
         this.publishDate = publishDate;
     }
     
@@ -108,12 +119,14 @@ public class clsMovie {
                 newMovie.setActors(rs.getString(4));
                 newMovie.setPoint(rs.getFloat(5));
                 newMovie.setFormat(rs.getString(6));
-                newMovie.setType(rs.getString(7));
-                newMovie.setPublishDate(rs.getDate(8));
+                newMovie.setCategory(rs.getString(7));
+                newMovie.setPublishDate(rs.getString(8));
                 newMovie.setSummary(rs.getString(9));
                 newMovie.setAgeRestriction(rs.getInt(10));
                 newMovie.setScreenTime(rs.getInt(11));
                 newMovie.setPublished(rs.getInt(12));
+                newMovie.setSaleAmount(rs.getInt(13));
+                newMovie.setPictureName(rs.getString(14));
                 movieList.add(newMovie);
             }
             con.close();
@@ -133,7 +146,7 @@ public class clsMovie {
                 "<br>actors: " + this.actors +
                 "<br>point: " + this.point +
                 "<br>format: " + this.format +
-                "<br>type: " + this.type +
+                "<br>type: " + this.category +
                 "<br>publishDate: " + this.publishDate +
                 "<br>summary: " + this.summary +
                 "<br>ageRestriction: " + this.ageRestriction +

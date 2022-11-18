@@ -1,7 +1,7 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.erdal.*"%>
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.erdal.*"%>
 <jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -186,7 +186,7 @@
       <section class="bg-gray-7">
         <div class="breadcrumbs-custom box-transform-wrap context-dark">
           <div class="container">
-            <h3 class="breadcrumbs-custom-title">V?ZYONDA NE VAR?</h3>
+            <h3 class="breadcrumbs-custom-title">VİZYONDA NE VAR?</h3>
             <div class="breadcrumbs-custom-decor"></div>
           </div>
           <div class="box-transform" style="background-image: url(images/film-background.jpg);"></div>
@@ -225,7 +225,7 @@
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">
                 <%out.println(movies.get(6).getName());%>    
                 </a></li>
-              </ul><a class="button button-xl button-primary button-winona" href="contacts.html">B?LET AL</a>
+              </ul><a class="button button-xl button-primary button-winona" href="contacts.html">BİLET AL</a>
             </div>
             <div class="col-lg-8 col-xl-9">
               <!-- Tab panes-->
@@ -233,41 +233,51 @@
                 <div class="tab-pane fade show active" id="tabs-4-1">
                   <h4><%out.println(movies.get(0).getName());%></h4>
                   <p><%out.println(movies.get(0).getSummary());%></p>
-                  <p>Gösterime giri? tarihi: 19 Aral?k 2003 (Türkiye)</p><img src="images/yuzuklerinefendisi.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: Peter Jackson</p>
-                  <p>Kategoriler: Aksiyon, Macera, Fantezi, ?iddet</p>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(0).getPublishDate());%></p><img src="images/yuzuklerinefendisi.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(0).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(0).getCategory());%></p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-2">
                   <h4><%out.println(movies.get(1).getName());%></h4>
                   <p><%out.println(movies.get(1).getSummary());%></p>
-                  <p>Gösterime giri? tarihi: 10 Aral?k 1999 (Türkiye)</p><img src="images/fightclub2.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: David Fincher</p>
-                  <p>Kategoriler: Aksiyon, ?iddet, Vah?et, Psikilojik</p>
+                  <p>Gösterime giriş tarihi: </p><img src="images/fightclub2.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(1).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(1).getCategory());%></p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-3">
                   <h4><%out.println(movies.get(2).getName());%></h4>
                   <p><%out.println(movies.get(2).getSummary());%></p>
-                  <p>Lotus </p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(2).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(2).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(2).getCategory());%></p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-4">
                   <h4><%out.println(movies.get(3).getName());%></h4>
                   <p><%out.println(movies.get(3).getSummary());%></p>
-                  <p>Lotus ao scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(3).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(3).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(3).getCategory());%></p>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-5">
                   <h4><%out.println(movies.get(4).getName());%></h4>
                   <p><%out.println(movies.get(4).getSummary());%></p>
-                  <p>Lotus ascutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(4).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(4).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(4).getCategory());%></p>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-6">
                   <h4><%out.println(movies.get(5).getName());%></h4>
-                  <p></p>
-                  <p>Lotus advenaso scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p><%out.println(movies.get(5).getSummary());%></p>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(5).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(5).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(5).getCategory());%></p>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-7">
                   <h4><%out.println(movies.get(6).getName());%></h4>
-                  <p>Albus, dexter par        ctus</p>
-                  <p>Lotus advena scutum. Valebats</p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p><%out.println(movies.get(6).getSummary());%></p>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(6).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(6).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(6).getCategory());%></p>
                 </div>
               </div>
             </div>

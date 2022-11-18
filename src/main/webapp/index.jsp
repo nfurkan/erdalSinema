@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.erdal.*"%>
 <html class="wide wow-animation" lang="en">
   <head>
     <title>Ana Sayfa</title>
@@ -54,7 +56,13 @@
       </div>
     </div>
     <div class="page">
-      
+      <%
+        
+        clsMovie movie = new clsMovie();
+        ArrayList<clsMovie> movies = new ArrayList<clsMovie>();
+        movies = movie.getMovies();
+
+      %>
       <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
@@ -217,11 +225,11 @@
             </div>
             <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="images/gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/fightclub.jpg" alt="" width="631" height="587"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp#tabs-4-2" data-lightgallery="item"><img src="images/fightclub.jpg" alt="" width="631" height="587"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">DÖVÜ? KULÜBÜ</a></h6>
-                    <div class="thumbnail-mary-location">??DDET</div>
+                    <h6 class="thumbnail-mary-title"><a href="vizyondakiler.jsp#tabs-4-2"><%out.println(movies.get(0).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(0).getCategory());%></div>
                   </div>
                 </div>
               </article>
