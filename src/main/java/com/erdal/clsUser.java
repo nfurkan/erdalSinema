@@ -131,19 +131,26 @@ public class clsUser {
         return false;
     }
 
-    public void addUser() {
+    public boolean addUser() {
 
         String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `mail`, `telno`, `type`, `registerdate`)"
                 + "VALUES (NULL,'" + this.getName() + "','" + this.getPassword() + "','" + this.getMail() + "','" + this.getTelno() + "','" + this.getType() + "',CURRENT_TIMESTAMP)";
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
-            Statement stmt = con.createStatement();
-            stmt.execute(sql);
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        
+        if(!checkUser(this.getMail(), this.getPassword())){
+            
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+                Statement stmt = con.createStatement();
+                stmt.execute(sql);
+                con.close();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            return true;
         }
+        else
+            return false;
     }
 
     @Override

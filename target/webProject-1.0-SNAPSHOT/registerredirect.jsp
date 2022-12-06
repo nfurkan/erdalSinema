@@ -32,7 +32,10 @@
         newUser.setType(type);
         newUser.setMail(mail);
         newUser.setTelno(telno);
-        newUser.addUser();
+        if(newUser.addUser())
+            out.println("Kullanıcı başarıyla eklendi.");
+        else
+            out.println("Başarısız");
     %>
     </body>
 </html>
