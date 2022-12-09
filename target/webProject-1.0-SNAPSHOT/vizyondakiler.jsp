@@ -233,49 +233,49 @@
                 <div class="tab-pane fade show active" id="tabs-4-1">
                   <h4><%out.println(movies.get(0).getName());%></h4>
                   <p><%out.println(movies.get(0).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(0).getPublishDate());%></p><img src="images/yuzuklerinefendisi.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(0).getPublishDate());%></p><img src="images/<%out.println(movies.get(0).getPictureName());%>" alt="" width="835" height="418"/>
                   <p>Yönetmeni: <%out.println(movies.get(0).getDirector());%></p>
                   <p>Kategori: <%out.println(movies.get(0).getCategory());%></p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-2">
                   <h4><%out.println(movies.get(1).getName());%></h4>
                   <p><%out.println(movies.get(1).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: </p><img src="images/fightclub2.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: </p><img src="images/<%out.println(movies.get(1).getPictureName());%>" alt="" width="835" height="418"/>
                   <p>Yönetmeni: <%out.println(movies.get(1).getDirector());%></p>
                   <p>Kategori: <%out.println(movies.get(1).getCategory());%></p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-3">
                   <h4><%out.println(movies.get(2).getName());%></h4>
                   <p><%out.println(movies.get(2).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(2).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(2).getPublishDate());%></p><img src="images/<%out.println(movies.get(2).getPictureName());%>" alt="" width="835" height="418"/>
                   <p>Yönetmeni: <%out.println(movies.get(2).getDirector());%></p>
                   <p>Kategori: <%out.println(movies.get(2).getCategory());%></p>
                 </div>
                 <div class="tab-pane fade" id="tabs-4-4">
                   <h4><%out.println(movies.get(3).getName());%></h4>
                   <p><%out.println(movies.get(3).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(3).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(3).getPublishDate());%></p><img src="images/<%out.println(movies.get(3).getPictureName());%>" alt="" width="835" height="418"/>
                   <p>Yönetmeni: <%out.println(movies.get(3).getDirector());%></p>
                   <p>Kategori: <%out.println(movies.get(3).getCategory());%></p>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-5">
                   <h4><%out.println(movies.get(4).getName());%></h4>
                   <p><%out.println(movies.get(4).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(4).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(4).getPublishDate());%></p><img src="images/<%out.println(movies.get(4).getPictureName());%>" alt="" width="835" height="418"/>
                   <p>Yönetmeni: <%out.println(movies.get(4).getDirector());%></p>
                   <p>Kategori: <%out.println(movies.get(4).getCategory());%></p>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-6">
                   <h4><%out.println(movies.get(5).getName());%></h4>
                   <p><%out.println(movies.get(5).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(5).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(5).getPublishDate());%></p><img src="images/<%out.println(movies.get(5).getPictureName());%>" alt="" width="835" height="418"/>
                   <p>Yönetmeni: <%out.println(movies.get(5).getDirector());%></p>
                   <p>Kategori: <%out.println(movies.get(5).getCategory());%></p>
                 </div>
                   <div class="tab-pane fade" id="tabs-4-7">
                   <h4><%out.println(movies.get(6).getName());%></h4>
                   <p><%out.println(movies.get(6).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(6).getPublishDate());%></p><img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(6).getPublishDate());%></p><img src="images/<%out.println(movies.get(6).getPictureName());%>" alt="" width="835" height="418"/>
                   <p>Yönetmeni: <%out.println(movies.get(6).getDirector());%></p>
                   <p>Kategori: <%out.println(movies.get(6).getCategory());%></p>
                 </div>
