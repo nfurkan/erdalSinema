@@ -124,7 +124,7 @@
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.jsp">Sepetim</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.jsp"><img src="images/basket.png" alt="basket"></a>
                       </li>
                       <%
                             }
