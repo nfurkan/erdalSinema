@@ -225,7 +225,7 @@
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">
                 <%out.println(movies.get(6).getName());%>    
                 </a></li>
-              </ul><a class="button button-xl button-primary button-winona" href="contacts.html">BİLET AL</a>
+              </ul><a class="button button-xl button-primary button-winona" href="index.jsp">BİLET AL</a>
             </div>
             <div class="col-lg-8 col-xl-9">
               <!-- Tab panes-->
@@ -297,9 +297,9 @@
                 </div>
                 <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
                 </div>
-                <h6 class="product-title">Yak?nda Film - 1</h6>
+                <h6 class="product-title">Yakinda Film - 1</h6>
                 <div class="product-price-wrap">
-                  <div class="product-price">Yay?n Tarihi</div>
+                  <div class="product-price">Yayin Tarihi</div>
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
@@ -314,9 +314,9 @@
                 </div>
                 <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
                 </div>
-                <h6 class="product-title">Yak?nda Film - 2</h6>
+                <h6 class="product-title">Yakında Film - 2</h6>
                 <div class="product-price-wrap">
-                  <div class="product-price">Yay?n Tarihi</div>
+                  <div class="product-price">Yayın Tarihi</div>
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
@@ -331,9 +331,9 @@
                 </div>
                 <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
                 </div>
-                <h6 class="product-title">Yak?nda Film - 3</h6>
+                <h6 class="product-title">Yakında Film - 3</h6>
                 <div class="product-price-wrap">
-                  <div class="product-price">Yay?n Tarihi</div>
+                  <div class="product-price">Yayın Tarihi</div>
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
