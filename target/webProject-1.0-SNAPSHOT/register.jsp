@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/basket.css">
   </head>
     <body>
         <div class="preloader">
@@ -75,13 +76,13 @@
                       <li>
                         <div class="unit unit-spacing-xs">
                           <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                          <div class="unit-body"><a class="phone" href="tel:#">+1 718-999-3939</a></div>
+                          <div class="unit-body"><a class="phone" href="tel:#">erdal</a></div>
                         </div>
                       </li>
                       <li>
                         <div class="unit unit-spacing-xs">
                           <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                          <div class="unit-body"><a class="address" href="#">514 S. Magnolia St. Orlando, FL 32806</a></div>
+                          <div class="unit-body"><a class="address" href="#">erdal</a></div>
                         </div>
                       </li>
                     </ul>
@@ -99,8 +100,8 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="vizyondakiler.jsp">Vizyondakiler</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
-                      </li>
+                      <!--<li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
+                      </li>-->
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
@@ -171,5 +172,6 @@
     %>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/basket.js"></script>
     </body>
 </html>

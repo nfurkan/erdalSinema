@@ -108,8 +108,8 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="vizyondakiler.jsp">Vizyondakiler</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
-                      </li>
+                     <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
+                      </li>-->
                       <%
                           boolean loginSuccess = false;
                             Cookie cookie= null;
@@ -126,11 +126,11 @@
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
                       <li class="rd-nav-item">
-                          <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
-                            <span class="popuptext" id="myPopup">
-                                <img  src="images/avatar2.jpg" alt="allah"></img>
-                            </span>
-                          </div>
+                            <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
+                                <span class="popuptext" id="myPopup">
+                                    <img  src="images/avatar2.jpg" alt="allah"></img>
+                                </span>
+                            </div>
                       </li>
                       <%
                             }
@@ -225,7 +225,7 @@
               <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft"><a class="thumbnail-mary-figure" href="images/gallery-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/lotrkapak.jpg" alt="" width="310" height="585"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">YÜZÜKLERİN EFENDİSİ - ?K? KULE</a></h6>
+                    <h6 class="thumbnail-mary-title"><a href="#">YÜZÜKLERİN EFENDİSİ - KRALIN DÖNÜŞÜ</a></h6>
                     <div class="thumbnail-mary-location">MACERA</div>
                   </div>
                 </div>
@@ -248,7 +248,7 @@
                 <div class="thumbnail-mary-caption">
                   <div>
                     <h6 class="thumbnail-mary-title"><a href="#">ER RYAN'I KURTARMAK</a></h6>
-                    <div class="thumbnail-mary-location">AKS?YON</div>
+                    <div class="thumbnail-mary-location">AKSİYON</div>
                   </div>
                 </div>
               </article>
@@ -259,7 +259,7 @@
                 <div class="thumbnail-mary-caption">
                   <div>
                     <h6 class="thumbnail-mary-title"><a href="#">YILDIZLAR ARASI</a></h6>
-                    <div class="thumbnail-mary-location">B?L?M-KURGU</div>
+                    <div class="thumbnail-mary-location">BİLİM-KURGU</div>
                   </div>
                 </div>
               </article>
@@ -366,7 +366,7 @@
       <!-- What We Offer-->
       <section class="section section-md bg-default">
         <div class="container">
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">F?LM TÜRLER?</span></h3>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">FİLM TÜRLERİ</span></h3>
           <div class="row row-md row-30">
             <div class="col-sm-6 col-lg-4">
               <div class="oh-desktop">
@@ -375,7 +375,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-gun"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 1</a></h5> <!-- 1.s?ra 1.resim -->
+                    <h5 class="services-terri-title"><a href="#">Aksiyon</a></h5> <!-- 1.s?ra 1.resim -->
                   </div>
                 </article>
               </div>
@@ -387,7 +387,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-star"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 2</a></h5> <!-- 1.s?ra 2.resim -->
+                    <h5 class="services-terri-title"><a href="#">Bilim-Kurgu</a></h5> <!-- 1.s?ra 2.resim -->
                   </div>
                 </article>
               </div>
@@ -399,7 +399,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-hamburger"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 3</a></h5> <!-- 1.s?ra 3.resim -->
+                    <h5 class="services-terri-title"><a href="#">Macera</a></h5> <!-- 1.s?ra 3.resim -->
                   </div>
                 </article>
               </div>
@@ -411,7 +411,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-ice-cream"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 4</a></h5> <!-- 2.s?ra 1.resim -->
+                    <h5 class="services-terri-title"><a href="#">Şiddet</a></h5> <!-- 2.s?ra 1.resim -->
                   </div>
                 </article>
               </div>
@@ -423,7 +423,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-coffee-cup"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 5</a></h5> <!-- 2.s?ra 2.resim -->
+                    <h5 class="services-terri-title"><a href="#">Korku</a></h5> <!-- 2.s?ra 2.resim -->
                   </div>
                 </article>
               </div>
@@ -435,7 +435,7 @@
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-steak"></span>
-                    <h5 class="services-terri-title"><a href="#">Film Türü - 6</a></h5> <!-- 2.s?ra 3.resim -->
+                    <h5 class="services-terri-title"><a href="#">Drama</a></h5> <!-- 2.s?ra 3.resim -->
                   </div>
                 </article>
               </div>
@@ -485,13 +485,13 @@
       <!-- Tell-->
       <section class="section section-sm section-first bg-default">
         <div class="container">
-          <h3 class="heading-3">B?Z? DE?ERLEND?R?N!</h3>
+          <h3 class="heading-3">BİZİ DEĞERLENDİRİN!</h3>
           <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
             <div class="row row-20 gutters-20">
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
                   <input class="form-input" id="contact-your-name-6" type="text" name="name" data-constraints="@Required">
-                  <label class="form-label" for="contact-your-name-6">?sminiz*</label>
+                  <label class="form-label" for="contact-your-name-6">İsminiz*</label>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
@@ -505,15 +505,15 @@
                   <!--Select 2-->
                   <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
                     <option value="1">Kategori Seçin</option>
-                    <option value="2">?stek</option>
-                    <option value="3">?ikayet</option>
-                    <option value="4">Görü?</option>
+                    <option value="2">İstek</option>
+                    <option value="3">Şikayet</option>
+                    <option value="4">Görüş</option>
                   </select>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-wrap wow fadeIn">
-                  <label class="form-label" for="contact-message-6">Mesaj?n?z...</label>
+                  <label class="form-label" for="contact-message-6">Mesajınız...</label>
                   <textarea class="form-input textarea-lg" id="contact-message-6" name="message" data-constraints="@Required"></textarea>
                 </div>
               </div>
@@ -523,7 +523,7 @@
               <!-- Quote Classic-->
               <article class="quote-classic quote-classic-3 wow slideInDown">
                 <div class="quote-classic-text">
-                  <p class="q">Lütfen mesajlar?n?zda topluluk kurallar?na uyunuz.</p>
+                  <p class="q">Lütfen mesajlarınızda topluluk kurallarına uyunuz.</p>
                 </div>
               </article>
             </div>
@@ -540,129 +540,35 @@
                 <div class="box-icon-megan-icon linearicons-bag"></div>
               </div>
               <h5 class="box-icon-megan-title"><a href="#">Online Rezervasyon</a></h5>
-              <p class="box-icon-megan-text">?stedi?iniz zaman koltu?unuzu ay?rtabilirsiniz!</p>
+              <p class="box-icon-megan-text">İstediğiniz zaman koltuğunuzu ayırtabilirsiniz!</p>
             </article>
             <article class="box-icon-megan wow fadeInUp" data-wow-delay=".05s">
               <div class="box-icon-megan-header">
                 <div class="box-icon-megan-icon linearicons-map2"></div>
               </div>
-              <h5 class="box-icon-megan-title"><a href="#">Ferah Salonlar?m?z</a></h5>
-              <p class="box-icon-megan-text">Sinema salonlar?m?z geni?, havadar ve konforludur!</p>
+              <h5 class="box-icon-megan-title"><a href="#">Ferah Salonlarımız</a></h5>
+              <p class="box-icon-megan-text">Sinema salonlarımız geniş, havadar ve konforludur!</p>
             </article>
             <article class="box-icon-megan wow fadeInUp" data-wow-delay=".1s">
               <div class="box-icon-megan-header">
                 <div class="box-icon-megan-icon linearicons-radar"></div>
               </div>
               <h5 class="box-icon-megan-title"><a href="#">Güncel Teknolojiler</a></h5>
-              <p class="box-icon-megan-text">Kulland???m?z güncek teknolojilerle birlikte film seyriniz e?siz bir deneyime dönü?ecek!</p>
+              <p class="box-icon-megan-text">Kullandığımız güncel teknolojilerle birlikte film seyriniz eşsiz bir deneyime dönüşecek!</p>
             </article>
             <article class="box-icon-megan wow fadeInUp" data-wow-delay=".15s">
               <div class="box-icon-megan-header">
                 <div class="box-icon-megan-icon linearicons-thumbs-up"></div>
               </div>
-              <h5 class="box-icon-megan-title"><a href="#">Mü?teri Memnuniyeti</a></h5>
-              <p class="box-icon-megan-text">7-24 deste?e haz?r?z!</p>
+              <h5 class="box-icon-megan-title"><a href="#">Müşteri Memnuniyeti</a></h5>
+              <p class="box-icon-megan-text">7-24 desteğe hazırız!</p>
             </article>
           </div>
         </div>
       </section>
 
       
-      <!-- Page Footer-->
-      <footer class="section footer-modern context-dark footer-modern-2">
-        <div class="footer-modern-line">
-          <div class="container">
-            <div class="row row-50">
-              <div class="col-md-6 col-lg-4">
-                <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">What We Offer</span></h5>
-                <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
-                  <li><a href="#">Pizzas</a></li>
-                  <li><a href="#">Burgers</a></li>
-                  <li><a href="#">Salads</a></li>
-                  <li><a href="#">Drinks</a></li>
-                  <li><a href="#">Seafood</a></li>
-                  <li><a href="#">Drinks</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">Information</span></h5>
-                <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
-                  <li><a href="vizyondakiler.html">About us</a></li>
-                  <li><a href="#">Latest News</a></li>
-                  <li><a href="#">Our Menu</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="contacts.html">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-4 col-xl-5">
-                <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">Newsletter</span></h5>
-                <p class="wow fadeInRight">Sign up today for the latest news and updates.</p>
-                <!-- RD Mailform-->
-                <form class="rd-form rd-mailform rd-form-inline rd-form-inline-sm oh-desktop" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                  <div class="form-wrap wow slideInUp">
-                    <input class="form-input" id="subscribe-form-2-email" type="email" name="email" data-constraints="@Email @Required"/>
-                    <label class="form-label" for="subscribe-form-2-email">Enter your E-mail</label>
-                  </div>
-                  <div class="form-button form-button-2 wow slideInRight">
-                    <button class="button button-sm button-icon-3 button-primary button-winona" type="submit"><span class="d-none d-xl-inline-block">Subscribe</span><span class="icon mdi mdi-telegram d-xl-none"></span></button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-modern-line-2">
-          <div class="container">
-            <div class="row row-30 align-items-center">
-              <div class="col-sm-6 col-md-7 col-lg-4 col-xl-4">
-                <div class="row row-30 align-items-center text-lg-center">
-                  <div class="col-md-7 col-xl-6"><a class="brand" href="index.html"><img src="images/logo-inverse-198x66.png" alt="" width="198" height="66"/></a></div>
-                  <div class="col-md-5 col-xl-6">
-                    <div class="iso-1"><span><img src="images/like-icon-58x25.png" alt="" width="58" height="25"/></span><span class="iso-1-big">9.4k</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-12 col-lg-8 col-xl-8 oh-desktop">
-                <div class="group-xmd group-sm-justify">
-                  <div class="footer-modern-contacts wow slideInUp">
-                    <div class="unit unit-spacing-sm align-items-center">
-                      <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span></div>
-                      <div class="unit-body"><a class="phone" href="tel:#">+1 718-999-3939</a></div>
-                    </div>
-                  </div>
-                  <div class="footer-modern-contacts wow slideInDown">
-                    <div class="unit unit-spacing-sm align-items-center">
-                      <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
-                      <div class="unit-body"><a class="mail" href="mailto:#">info@demolink.org</a></div>
-                    </div>
-                  </div>
-                  <div class="wow slideInRight">
-                    <ul class="list-inline footer-social-list footer-social-list-2 footer-social-list-3">
-                      <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                      <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                      <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                      <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-modern-line-3">
-          <div class="container">
-            <div class="row row-10 justify-content-between">
-              <div class="col-md-6"><span>514 S. Magnolia St. Orlando, FL 32806</span></div>
-              <div class="col-md-auto">
-                <!-- Rights-->
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span></span><span>.&nbsp;</span><span>All Rights Reserved.</span><span> Design&nbsp;by&nbsp;<a href="#">Erdal Bey</a></span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+     
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
