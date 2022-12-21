@@ -125,18 +125,12 @@
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="odeme.jsp"><img src="images/basket.png" alt="basket"></a>
-                          <!--<div class="cart">  
-                        <div class="popup">
-                            <div class="row checkout">  
-                            </div>  
-                            <div class="row checkout">  
-                            <span>  
-                                <a class="checkout-button" href="odeme.jsp">Ödeme</a>  
+                      <li class="rd-nav-item">
+                          <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
+                            <span class="popuptext" id="myPopup">
+                                <img  src="images/avatar2.jpg" alt="allah"></img>
                             </span>
-                            </div>  
-                        </div>  
-                    </div> -->
+                          </div>
                       </li>
                       <%
                             }
@@ -674,6 +668,7 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/basket.js"></script>
     <!-- coded by Himic-->
   </body>
 </html>
