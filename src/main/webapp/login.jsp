@@ -166,6 +166,9 @@
                 user.setSessionId(user.sessionIdGenerator(mail));
                 cookie.setMaxAge(60*60*24);
                 response.addCookie(cookie);
+                if(user.getName().equals("erdal"))
+                response.sendRedirect(request.getContextPath() + "/admin.jsp");
+                else
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
             }
             else{

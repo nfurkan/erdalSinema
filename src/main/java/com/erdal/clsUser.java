@@ -17,77 +17,66 @@ import java.util.Date;
 public class clsUser {
 
     int id;
-    String name, password, type, mail, telno, temp, sessionId;
-    Date registerDate = new Date();
+    String name, password, type, mail, telno, temp, sessionId, watchedMovies;
 
+    public String getWatchedMovies() {
+        return watchedMovies;
+    }
+    public void setWatchedMovies(String watchedMovies) {
+        this.watchedMovies = watchedMovies;
+    }
+    Date registerDate = new Date();
     public String getSessionId() {
         return sessionId;
     }
-
     public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
     }
-
     public String getTemp() {
         return temp;
     }
-
     public void setTemp(String temp) {
         this.temp = temp;
     }
-
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
-
     public String getType() {
         return type;
     }
-
     public void setType(String type) {
         this.type = type;
     }
-
     public String getMail() {
         return mail;
     }
-
     public void setMail(String mail) {
         this.mail = mail;
     }
-
     public String getTelno() {
         return telno;
     }
-
     public void setTelno(String telno) {
         this.telno = telno;
     }
-
     public Date getRegisterDate() {
         return registerDate;
     }
-
     public void setRegisterDate(Date registerDate) {
         this.registerDate = registerDate;
     }
@@ -150,6 +139,33 @@ public class clsUser {
         }
         else
             return false;
+    }
+    
+    public clsUser getUser(String mail) {
+        
+        clsUser user = new clsUser();
+        
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            String sql = "SELECT * FROM `tbUsers` WHERE `mail` LIKE '" + mail + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+              user.setId(rs.getInt(1));
+              user.setName(rs.getString(2));
+              user.setPassword(rs.getString(3));
+              user.setMail(rs.getString(4));
+              user.setTelno(rs.getString(5));
+              user.setType(rs.getString(6));
+              user.setRegisterDate(rs.getDate(7));
+              user.setWatchedMovies(rs.getString(8));
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return user;
     }
 
     @Override
