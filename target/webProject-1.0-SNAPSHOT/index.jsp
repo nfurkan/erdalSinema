@@ -444,7 +444,7 @@
         </div>
       </section>
 <!--
-      <!-- Section CTA--
+      <!-- Section CTA
       <section class="primary-overlay section parallax-container" data-parallax-img="images/film-background.jpg">
         <div class="parallax-content section-xl context-dark text-md-left">
           <div class="container">
@@ -477,11 +477,100 @@
             </div>
           </div>
         </div>
+      </section>-->
+      <!-- Section Services  Last section-->
+      <section class="section section-sm bg-default">
+        <div class="container">
+          <div class="owl-carousel owl-style-11 dots-style-2" data-items="1" data-sm-items="1" data-lg-items="2" data-xl-items="4" data-margin="30" data-dots="true" data-mouse-drag="true" data-rtl="true">
+            <article class="box-icon-megan wow fadeInUp">
+              <div class="box-icon-megan-header">
+                <div class="box-icon-megan-icon linearicons-bag"></div>
+              </div>
+              <h5 class="box-icon-megan-title"><a href="#">Online Rezervasyon</a></h5>
+              <p class="box-icon-megan-text">İstediğiniz zaman koltuğunuzu ayırtabilirsiniz!</p>
+            </article>
+            <article class="box-icon-megan wow fadeInUp" data-wow-delay=".05s">
+              <div class="box-icon-megan-header">
+                <div class="box-icon-megan-icon linearicons-map2"></div>
+              </div>
+              <h5 class="box-icon-megan-title"><a href="#">Ferah Salonlarımız</a></h5>
+              <p class="box-icon-megan-text">Sinema salonlarımız geniş, havadar ve konforludur!</p>
+            </article>
+            <article class="box-icon-megan wow fadeInUp" data-wow-delay=".1s">
+              <div class="box-icon-megan-header">
+                <div class="box-icon-megan-icon linearicons-radar"></div>
+              </div>
+              <h5 class="box-icon-megan-title"><a href="#">Güncel Teknolojiler</a></h5>
+              <p class="box-icon-megan-text">Kullandığımız güncel teknolojilerle birlikte film seyriniz eşsiz bir deneyime dönüşecek!</p>
+            </article>
+            <article class="box-icon-megan wow fadeInUp" data-wow-delay=".15s">
+              <div class="box-icon-megan-header">
+                <div class="box-icon-megan-icon linearicons-thumbs-up"></div>
+              </div>
+              <h5 class="box-icon-megan-title"><a href="#">Müşteri Memnuniyeti</a></h5>
+              <p class="box-icon-megan-text">7-24 desteğe hazırız!</p>
+            </article>
+          </div>
+        </div>
       </section>
-
-     
-      
-
+        <!-- What We Offer-->
+      <section class="section section-xl bg-default">
+        <div class="container">
+          <h3 class="wow fadeInLeft">İZLEYİCİLERİMİZ NE DİYOR?</h3>
+        </div>
+        <div class="container container-style-1">
+          <div class="owl-carousel owl-style-12" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" data-xl-margin="45" data-autoplay="true" data-nav="true" data-center="true" data-smart-speed="400">
+            <!-- Quote Tara-->
+            <article class="quote-tara">
+              <div class="quote-tara-caption">
+                <div class="quote-tara-text">
+                  <p class="q">Gerçekten de sevdiğim türler arasından bir film seçilmiş, bu hizmetten çok memnun kaldım!</p>
+                </div>
+                <div class="quote-tara-figure"><img src="images/user-6-115x115.jpg" alt="" width="115" height="115"/>
+                </div>
+              </div>
+              <h6 class="quote-tara-author">Kullanıcı - 1</h6>
+              <div class="quote-tara-status">Üye</div>
+            </article>
+            <!-- Quote Tara-->
+            <article class="quote-tara">
+              <div class="quote-tara-caption">
+                <div class="quote-tara-text">
+                  <p class="q">Normalde çok zor film beğenirim ama buna bayıldım! Tam zevkime hitap ediyor...</p>
+                </div>
+                <div class="quote-tara-figure"><img src="images/user-8-115x115.jpg" alt="" width="115" height="115"/>
+                </div>
+              </div>
+              <h6 class="quote-tara-author">Kullanıcı - 2</h6>
+              <div class="quote-tara-status">Üye</div>
+            </article>
+            <!-- Quote Tara-->
+            <article class="quote-tara">
+              <div class="quote-tara-caption">
+                <div class="quote-tara-text">
+                  <p class="q">Bazen film seçmekte çok zorlanıyorum, sağolsun erdal sinema benim yerime seçmiş, mükemmel!</p>
+                </div>
+                <div class="quote-tara-figure"><img src="images/user-7-115x115.jpg" alt="" width="115" height="115"/>
+                </div>
+              </div>
+              <h6 class="quote-tara-author">Kullanıcı - 3</h6>
+              <div class="quote-tara-status">Üye</div>
+            </article>
+            <!-- Quote Tara-->
+            <article class="quote-tara">
+              <div class="quote-tara-caption">
+                <div class="quote-tara-text">
+                  <p class="q">Film sevdiğim türlere hitap ediyordu ama sıkıldım...</p>
+                </div>
+                <div class="quote-tara-figure"><img src="images/user-9-115x115.jpg" alt="" width="115" height="115"/>
+                </div>
+              </div>
+              <h6 class="quote-tara-author">Kullanıcı - 4</h6>
+              <div class="quote-tara-status">Üye</div>
+            </article>
+          </div>
+        </div>
+      </section>
       <!-- Tell-->
       <section class="section section-sm section-first bg-default">
         <div class="container">
@@ -530,45 +619,6 @@
           </form>
         </div>
       </section>
-
-      <!-- Section Services  Last section-->
-      <section class="section section-sm bg-default">
-        <div class="container">
-          <div class="owl-carousel owl-style-11 dots-style-2" data-items="1" data-sm-items="1" data-lg-items="2" data-xl-items="4" data-margin="30" data-dots="true" data-mouse-drag="true" data-rtl="true">
-            <article class="box-icon-megan wow fadeInUp">
-              <div class="box-icon-megan-header">
-                <div class="box-icon-megan-icon linearicons-bag"></div>
-              </div>
-              <h5 class="box-icon-megan-title"><a href="#">Online Rezervasyon</a></h5>
-              <p class="box-icon-megan-text">İstediğiniz zaman koltuğunuzu ayırtabilirsiniz!</p>
-            </article>
-            <article class="box-icon-megan wow fadeInUp" data-wow-delay=".05s">
-              <div class="box-icon-megan-header">
-                <div class="box-icon-megan-icon linearicons-map2"></div>
-              </div>
-              <h5 class="box-icon-megan-title"><a href="#">Ferah Salonlarımız</a></h5>
-              <p class="box-icon-megan-text">Sinema salonlarımız geniş, havadar ve konforludur!</p>
-            </article>
-            <article class="box-icon-megan wow fadeInUp" data-wow-delay=".1s">
-              <div class="box-icon-megan-header">
-                <div class="box-icon-megan-icon linearicons-radar"></div>
-              </div>
-              <h5 class="box-icon-megan-title"><a href="#">Güncel Teknolojiler</a></h5>
-              <p class="box-icon-megan-text">Kullandığımız güncel teknolojilerle birlikte film seyriniz eşsiz bir deneyime dönüşecek!</p>
-            </article>
-            <article class="box-icon-megan wow fadeInUp" data-wow-delay=".15s">
-              <div class="box-icon-megan-header">
-                <div class="box-icon-megan-icon linearicons-thumbs-up"></div>
-              </div>
-              <h5 class="box-icon-megan-title"><a href="#">Müşteri Memnuniyeti</a></h5>
-              <p class="box-icon-megan-text">7-24 desteğe hazırız!</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      
-     
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
