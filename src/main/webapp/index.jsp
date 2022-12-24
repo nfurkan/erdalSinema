@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.util.ArrayList"%>
 <%@page import="com.erdal.*"%>
+<%@page import="java.sql.*"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Date"%>
+<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <html class="wide wow-animation" lang="en">
   <head>
     <title>Ana Sayfa</title>
@@ -117,7 +119,7 @@
                             cookies= request.getCookies();
                             for(int i = 0; i < cookies.length; i++){
                                 cookie= cookies[i];
-                                if(cookie.getName().equals("SESSIONID") && cookie.getValue() != null){
+                                if(cookie.getValue().equals(user.getSessionId())){
                                     loginSuccess = true;
                                     break;}
                             }

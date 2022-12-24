@@ -1,11 +1,10 @@
-<%-- 
-    Document   : login
-    Created on : Oct 23, 2022, 5:24:14 PM
-    Author     : PC
---%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="com.erdal.*"%>
+<%@page import="java.sql.*"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Date"%>
+<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <html>
     <head>
     <title>Kayıt Ol</title>
@@ -165,11 +164,6 @@
           </form>
         </div>
       </section>
-    <%
-    
-        
-
-    %>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/basket.js"></script>

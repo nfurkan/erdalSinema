@@ -1,11 +1,10 @@
-<%-- 
-    Document   : odeme
-    Created on : Dec 21, 2022, 2:52:39 AM
-    Author     : furkan
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="com.erdal.*"%>
+<%@page import="java.sql.*"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Date"%>
+<jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

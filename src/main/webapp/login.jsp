@@ -1,14 +1,10 @@
-<%-- 
-    Document   : login
-    Created on : Oct 23, 2022, 5:24:14 PM
-    Author     : PC
---%>
+<!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="com.erdal.*"%>
 <%@page import="java.sql.*"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Date"%>
 <jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
-<!DOCTYPE html>
 <html>
     <head>
     <title>Giriş Yap</title>
