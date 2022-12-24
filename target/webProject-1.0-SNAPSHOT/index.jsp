@@ -106,14 +106,16 @@
                   <div class="rd-navbar-main">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Ana Sayfa</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">Panel</a>
+                      </li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.jsp">Ana Sayfa</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="vizyondakiler.jsp">Vizyondakiler</a>
                       </li>
                      <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
                       </li>-->
                       <%
-                          boolean loginSuccess = false;
+                            boolean loginSuccess = false;
                             Cookie cookie= null;
                             Cookie[] cookies= null;
                             cookies= request.getCookies();
@@ -128,6 +130,16 @@
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
                       <li class="rd-nav-item">
+                      <%                   
+                          if(cookie.getValue().equals("erdal1")){
+                      %>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="admin.jsp">Panel</a>
+                      </li>
+                      <%
+                          }
+                          else{
+                      %>
+                      <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
                                 <span class="popuptext" id="myPopup">
                                     <img  src="images/avatar2.jpg" alt="foto"></img>
@@ -135,8 +147,9 @@
                             </div>
                       </li>
                       <%
-                            }
-                            else{
+                              }
+                          }
+                          else{
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Filmlerim</a>
                       </li>

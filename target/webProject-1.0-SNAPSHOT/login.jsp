@@ -163,10 +163,11 @@
                 
                 Cookie cookie = new Cookie("SESSIONID",user.sessionIdGenerator(mail));
                 user.setSessionId(user.sessionIdGenerator(mail));
+                admin.setSessionId(user.getSessionId());
                 cookie.setMaxAge(60*60*24);
                 response.addCookie(cookie);
                 
-                if(admin.getName().equals("erdal"))
+                if(admin.getId() == 1)
                 response.sendRedirect(request.getContextPath() + "/admin.jsp");
                 else
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
