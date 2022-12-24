@@ -128,7 +128,7 @@
                       <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
                                 <span class="popuptext" id="myPopup">
-                                    <img  src="images/avatar2.jpg" alt="allah"></img>
+                                    <img  src="images/avatar2.jpg" alt="foto"></img>
                                 </span>
                             </div>
                       </li>
@@ -211,7 +211,6 @@
           </nav>
         </div>
       </header>
-      
       <section class="section section-last bg-default">
           <br>
           <br>

@@ -162,14 +162,19 @@
         if(mail != null && password != null){
         
             if(newUser.checkUser(mail, password)){
+                clsUser admin;
+                admin = newUser.getUser(mail);
+                
                 Cookie cookie = new Cookie("SESSIONID",user.sessionIdGenerator(mail));
                 user.setSessionId(user.sessionIdGenerator(mail));
                 cookie.setMaxAge(60*60*24);
                 response.addCookie(cookie);
-                if(user.getName().equals("erdal"))
+                
+                if(admin.getName().equals("erdal"))
                 response.sendRedirect(request.getContextPath() + "/admin.jsp");
                 else
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
+                
             }
             else{
                 response.sendRedirect(request.getContextPath() + "/login.jsp");
