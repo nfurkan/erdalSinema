@@ -195,7 +195,7 @@
         </div>
         <div class="container">
           <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">ANA SAYFA</a></li>
+            <li><a href="index.jsp">ANA SAYFA</a></li>
             <li class="active">FİLMLERİM</li>
           </ul>
         </div>

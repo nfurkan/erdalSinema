@@ -106,8 +106,6 @@
                   <div class="rd-navbar-main">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Panel</a>
-                      </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.jsp">Ana Sayfa</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="vizyondakiler.jsp">Vizyondakiler</a>
@@ -116,28 +114,30 @@
                       </li>-->
                       <%
                             boolean loginSuccess = false;
+                            boolean isAdmin = false;
                             Cookie cookie= null;
                             Cookie[] cookies= null;
                             cookies= request.getCookies();
                             for(int i = 0; i < cookies.length; i++){
                                 cookie= cookies[i];
-                                if(cookie.getValue().equals(user.getSessionId())){
+                                if(cookie.getName().equals("SESSIONID") && cookie.getValue() != "" ){
                                     loginSuccess = true;
+                                    if(cookie.getValue().equals("1erdal")){
+                                    isAdmin = true;}
                                     break;}
                             }
                             if(loginSuccess){
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item">
-                      <%                   
-                          if(cookie.getValue().equals("erdal1")){
+                      <%            
+                            if(isAdmin){
                       %>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="admin.jsp">Panel</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Panel</a>
                       </li>
                       <%
-                          }
-                          else{
+                            }
+                            else{
                       %>
                       <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
@@ -147,7 +147,7 @@
                             </div>
                       </li>
                       <%
-                              }
+                            }
                           }
                           else{
                       %>
@@ -226,6 +226,220 @@
           </nav>
         </div>
       </header>
+      <section class="bg-gray-7">
+        <div class="breadcrumbs-custom box-transform-wrap context-dark">
+          <div class="container">
+            <h3 class="breadcrumbs-custom-title">HOŞ GELDİNİZ ERDAL BEY</h3>
+            <div class="breadcrumbs-custom-decor"></div>
+          </div>
+          <div class="box-transform" style="background-image: url(images/silincek.jpg);"></div>
+        </div>
+        <div class="container">
+          <ul class="breadcrumbs-custom-path">
+            <li><a href="index.jsp">ANA SAYFA</a></li>
+            <li class="active">PANEL</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">VİZYONDAKİLER</span></h3>
+          <div class="row row-lg row-30">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft" data-wow-delay=".15s">
+                <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 1</h6>
+                <div class="product-price-wrap">
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft" data-wow-delay=".1s">
+                <div class="product-figure"><img src="images/product-2-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 2</h6>
+                <div class="product-price-wrap">
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div><span class="product-badge product-badge-new">Yeni</span>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft" data-wow-delay=".05s">
+                <div class="product-figure"><img src="images/product-3-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 3</h6>
+                <div class="product-price-wrap">
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft">
+                <div class="product-figure"><img src="images/product-4-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 4</h6>
+                <div class="product-price-wrap">
+                  <!--<div class="product-price product-price-old">$40.00</div>-->
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div><span class="product-badge product-badge-sale">Kampanya</span>
+              </article>
+            </div>
+          </div>
+          <div class="row row-lg row-30">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft" data-wow-delay=".15s">
+                <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 1</h6>
+                <div class="product-price-wrap">
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft" data-wow-delay=".1s">
+                <div class="product-figure"><img src="images/product-2-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 2</h6>
+                <div class="product-price-wrap">
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div><span class="product-badge product-badge-new">Yeni</span>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft" data-wow-delay=".05s">
+                <div class="product-figure"><img src="images/product-3-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 3</h6>
+                <div class="product-price-wrap">
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft">
+                <div class="product-figure"><img src="images/product-4-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
+                </div>
+                <h6 class="product-title">Yakında Film - 4</h6>
+                <div class="product-price-wrap">
+                  <!--<div class="product-price product-price-old">$40.00</div>-->
+                  <div class="product-price">Yayın Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Bilet Al</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film'e Göz At</a></div>
+                </div><span class="product-badge product-badge-sale">Kampanya</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="col-lg-4 col-xl-3">
+              <h5 class="text-spacing-200 text-capitalize">FİLM LİSTESİ</h5>
+              <ul class="nav list-category list-category-down-md-inline-block">
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">
+                <%out.println(movies.get(0).getName());%>
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">
+                <%out.println(movies.get(1).getName());%>
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">
+                <%out.println(movies.get(2).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-4" data-toggle="tab">
+                <%out.println(movies.get(3).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-5" data-toggle="tab">
+                <%out.println(movies.get(4).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-6" data-toggle="tab">
+                <%out.println(movies.get(5).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">
+                <%out.println(movies.get(6).getName());%>    
+                </a></li>
+              </ul>
+            </div>
+       <div class="col-lg-4 col-xl-3">
+              <h5 class="text-spacing-200 text-capitalize">FİLM LİSTESİ</h5>
+              <ul class="nav list-category list-category-down-md-inline-block">
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">
+                <%out.println(movies.get(0).getName());%>
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">
+                <%out.println(movies.get(1).getName());%>
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">
+                <%out.println(movies.get(2).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-4" data-toggle="tab">
+                <%out.println(movies.get(3).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-5" data-toggle="tab">
+                <%out.println(movies.get(4).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-6" data-toggle="tab">
+                <%out.println(movies.get(5).getName());%>    
+                </a></li>
+                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">
+                <%out.println(movies.get(6).getName());%>    
+                </a></li>
+              </ul>
+            </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->

@@ -117,7 +117,8 @@
                             boolean isAdmin = false;
                             Cookie cookie= null;
                             Cookie[] cookies= null;
-                            cookies= request.getCookies();
+                            cookies = request.getCookies();
+                            if(cookies != null){
                             for(int i = 0; i < cookies.length; i++){
                                 cookie= cookies[i];
                                 if(cookie.getName().equals("SESSIONID") && cookie.getValue() != "" ){
@@ -157,6 +158,7 @@
                       </li>
                       <%
                             }
+                        }
                       %>
                     </ul>
                   </div>
