@@ -168,7 +168,7 @@
                 response.addCookie(cookie);
                 
                 if(admin.getId() == 1)
-                response.sendRedirect(request.getContextPath() + "/admin.jsp");
+                response.sendRedirect(request.getContextPath() + "/panel.jsp");
                 else
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
                 

@@ -133,7 +133,7 @@
                       <%            
                             if(isAdmin){
                       %>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="admin.jsp">Panel</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="panel.jsp">Panel</a>
                       </li>
                       <%
                             }
