@@ -7,3 +7,12 @@ function myFunction() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 }
+
+document.getElementById("suggestButton").addEventListener(
+  "click",
+  () => {
+    //document.getElementById("welcome").hidden = true;
+    document.getElementById("movieSuggestSection").hidden = true;
+  },
+  false
+);

@@ -227,7 +227,7 @@
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">
                 <%out.println(movies.get(6).getName());%>    
                 </a></li>
-              </ul><a class="button button-xl button-primary button-winona" href="index.jsp">BİLET AL</a>
+              </ul>
             </div>
             <div class="col-lg-8 col-xl-9">
               <!-- Tab panes-->
@@ -372,6 +372,7 @@
           </div>
         </div>
       </section>-->
+      <a class="button button-xl button-primary button-winona" href="#">FİLM ÖNER</a>
       <section class="section section-lg bg-gray-100 text-left section-relative">
         <div class="container">
           <div class="row row-60 justify-content-center justify-content-xxl-between">
