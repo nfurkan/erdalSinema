@@ -150,6 +150,7 @@
                             }
                           }
                           else{
+                            response.sendRedirect(request.getContextPath() + "/login.jsp");
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Filmlerim</a>
                       </li>
