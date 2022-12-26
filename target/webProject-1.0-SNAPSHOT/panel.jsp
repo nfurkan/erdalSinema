@@ -265,11 +265,21 @@
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
                   <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div><span class="product-badge product-badge-new">Yeni</span>
+                </div>
+                <%if(movies.get(i).getBroadcasting() == 1){%>
+                <span class="product-badge product-badge-new">VİZYONDA</span>
+                <%  
+                    }
+                %>
+                <%if(movies.get(i).getPublished() == 0){%>
+                <span class="product-badge product-badge-sale">YAKINDA</span>
+                <%  
+                    }
+                %>
               </article>
             </div>
             <%
-            
+
                 }
             
             %>

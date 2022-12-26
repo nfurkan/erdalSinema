@@ -14,16 +14,16 @@ import java.util.Date;
  */
 public class clsMovie {
     
-    int id, ageRestriction, screenTime, published, saleAmount;
+    int id, ageRestriction, screenTime, published, broadcasting;
     String name, director, actors, format, category, summary, publishDate;
     String pictureName;
     float point;
 
-    public int getSaleAmount() {
-        return saleAmount;
+    public int getBroadcasting() {
+        return broadcasting;
     }
-    public void setSaleAmount(int saleAmount) {
-        this.saleAmount = saleAmount;
+    public void setBroadcasting(int broadcasting) {
+        this.broadcasting = broadcasting;
     }
     public String getPictureName() {
         return pictureName;
@@ -126,7 +126,7 @@ public class clsMovie {
                 newMovie.setAgeRestriction(rs.getInt(10));
                 newMovie.setScreenTime(rs.getInt(11));
                 newMovie.setPublished(rs.getInt(12));
-                newMovie.setSaleAmount(rs.getInt(13));
+                newMovie.setBroadcasting(rs.getInt(13));
                 newMovie.setPictureName(rs.getString(14));
                 movieList.add(newMovie);
             }
