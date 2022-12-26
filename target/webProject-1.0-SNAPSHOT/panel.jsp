@@ -246,10 +246,8 @@
         <div class="container">
           <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">ERDAL'IN FİLMLERİ</span></h3>
           <div class="row row-lg row-30">
-            <%
-            
-                for(int i = 0; i < movies.size(); i++){
-            
+            <%    
+                for(int i = 0; i < movies.size(); i++){ 
             %>
             <div class="col-sm-6 col-lg-4 col-xl-3">
               <!-- Product-->
@@ -279,9 +277,7 @@
               </article>
             </div>
             <%
-
-                }
-            
+                }  
             %>
           </div>
         </div>
