@@ -244,7 +244,7 @@
       </section>
       <section class="section section-lg bg-default">
         <div class="container">
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">VİZYONDAKİLER</span></h3>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">ERDAL'IN FİLMLERİ</span></h3>
           <div class="row row-lg row-30">
             <%
             
@@ -254,7 +254,7 @@
             <div class="col-sm-6 col-lg-4 col-xl-3">
               <!-- Product-->
               <article class="product wow fadeInLeft" data-wow-delay=".1s">
-                <div class="product-figure"><img src="images/product-2-161x162.png" alt="" width="161" height="162"/>
+                  <div class="product-figure"><img src="images/<%out.println(movies.get(i).getPictureName());%>-vizyondakiler.jpg" alt="" width="161" height="162"/>
                 </div>
                 <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
                 </div>

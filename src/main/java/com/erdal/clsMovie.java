@@ -16,7 +16,7 @@ public class clsMovie {
     
     int id, ageRestriction, screenTime, published, saleAmount;
     String name, director, actors, format, category, summary, publishDate;
-    ArrayList<String> pictureNames;
+    String pictureName;
     float point;
 
     public int getSaleAmount() {
@@ -25,11 +25,11 @@ public class clsMovie {
     public void setSaleAmount(int saleAmount) {
         this.saleAmount = saleAmount;
     }
-    public ArrayList<String> getPictureName() {
-        return pictureNames;
+    public String getPictureName() {
+        return pictureName;
     }
-    public void setPictureNames(String pictureName) {
-        this.pictureNames = pictureNames;
+    public void setPictureName(String pictureName) {
+        this.pictureName = pictureName;
     }
     public void setId(int id) {
         this.id = id;
@@ -127,7 +127,7 @@ public class clsMovie {
                 newMovie.setScreenTime(rs.getInt(11));
                 newMovie.setPublished(rs.getInt(12));
                 newMovie.setSaleAmount(rs.getInt(13));
-                newMovie.setPictureNames(rs.getString(14));
+                newMovie.setPictureName(rs.getString(14));
                 movieList.add(newMovie);
             }
             con.close();

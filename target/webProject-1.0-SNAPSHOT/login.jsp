@@ -204,11 +204,11 @@
                 clsUser admin;
                 admin = newUser.getUser(mail);
                 
-                Cookie cookie = new Cookie("SESSIONID",user.sessionIdGenerator(mail));
+                Cookie newCookie = new Cookie("SESSIONID",user.sessionIdGenerator(mail));
                 user.setSessionId(user.sessionIdGenerator(mail));
                 admin.setSessionId(user.getSessionId());
-                cookie.setMaxAge(60*60*24);
-                response.addCookie(cookie);
+                newCookie.setMaxAge(60*60*24);
+                response.addCookie(newCookie);
                 
                 if(admin.getId() == 1)
                 response.sendRedirect(request.getContextPath() + "/panel.jsp");
