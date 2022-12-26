@@ -108,14 +108,58 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.jsp">Ana Sayfa</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Vizyondakiler</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="vizyondakiler.jsp">Vizyondakiler</a>
                       </li>
-                      <!--<li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
+                     <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
                       </li>-->
+                      <%
+                            boolean loginSuccess = false;
+                            boolean isAdmin = false;
+                            Cookie cookie= null;
+                            Cookie[] cookies= null;
+                            cookies = request.getCookies();
+                            if(cookies != null){
+                            for(int i = 0; i < cookies.length; i++){
+                                cookie= cookies[i];
+                                if(cookie.getName().equals("SESSIONID") && cookie.getValue() != "" ){
+                                    loginSuccess = true;
+                                    if(cookie.getValue().equals("1erdal")){
+                                    isAdmin = true;}
+                                    break;}
+                            }
+                            if(loginSuccess){
+                      %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="filmlerim.jsp">Filmlerim</a>
+                      </li>
+                      <%            
+                            if(isAdmin){
+                      %>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="panel.jsp">Panel</a>
+                      </li>
+                      <%
+                            }
+                            else{
+                      %>
+                      <li class="rd-nav-item">
+                            <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
+                                <span class="popuptext" id="myPopup">
+                                    <img  src="images/avatar2.jpg" alt="foto"></img>
+                                </span>
+                            </div>
+                      </li>
+                      <%
+                            }
+                          }
+                          else{
+                      %>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Filmlerim</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
                       </li>
+                      <%
+                            }
+                        }
+                      %>
                     </ul>
                   </div>
                 </div>
