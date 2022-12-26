@@ -246,25 +246,11 @@
         <div class="container">
           <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">VİZYONDAKİLER</span></h3>
           <div class="row row-lg row-30">
-            <%%>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-              <!-- Product-->
-              <article class="product wow fadeInLeft" data-wow-delay=".15s">
-                <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162"/>
-                </div>
-                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
-                </div>
-                <h6 class="product-title">Yakında Film - 1</h6>
-                <div class="product-price-wrap">
-                  <div class="product-price">Yayın Tarihi</div>
-                </div>
-                <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div>
-              </article>
-            </div>
-            <%%>
+            <%
+            
+                for(int i = 0; i < movies.size(); i++){
+            
+            %>
             <div class="col-sm-6 col-lg-4 col-xl-3">
               <!-- Product-->
               <article class="product wow fadeInLeft" data-wow-delay=".1s">
@@ -272,9 +258,9 @@
                 </div>
                 <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
                 </div>
-                <h6 class="product-title">Yakında Film - 2</h6>
+                <h6 class="product-title"><%out.println(movies.get(i).getName());%></h6>
                 <div class="product-price-wrap">
-                  <div class="product-price">Yayın Tarihi</div>
+                  <div class="product-price"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
                 <div class="product-button">
                   <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
@@ -282,112 +268,11 @@
                 </div><span class="product-badge product-badge-new">Yeni</span>
               </article>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-              <!-- Product-->
-              <article class="product wow fadeInLeft" data-wow-delay=".05s">
-                <div class="product-figure"><img src="images/product-3-161x162.png" alt="" width="161" height="162"/>
-                </div>
-                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
-                </div>
-                <h6 class="product-title">Yakında Film - 3</h6>
-                <div class="product-price-wrap">
-                  <div class="product-price">Yayın Tarihi</div>
-                </div>
-                <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-              <!-- Product-->
-              <article class="product wow fadeInLeft">
-                <div class="product-figure"><img src="images/fightclub-vizyondakiler.jpg" alt="" width="161" height="162"/>
-                </div>
-                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
-                </div>
-                <h6 class="product-title">Yakında Film - 4</h6>
-                <div class="product-price-wrap">
-                  <!--<div class="product-price product-price-old">$40.00</div>-->
-                  <div class="product-price">Yayın Tarihi</div>
-                </div>
-                <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div><span class="product-badge product-badge-sale">Kampanya</span>
-              </article>
-            </div>
-          </div>
-          <div class="row row-lg row-30">
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-              <!-- Product-->
-              <article class="product wow fadeInLeft" data-wow-delay=".15s">
-                <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162"/>
-                </div>
-                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
-                </div>
-                <h6 class="product-title">Yakında Film - 1</h6>
-                <div class="product-price-wrap">
-                  <div class="product-price">Yayın Tarihi</div>
-                </div>
-                <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-              <!-- Product-->
-              <article class="product wow fadeInLeft" data-wow-delay=".1s">
-                <div class="product-figure"><img src="images/product-2-161x162.png" alt="" width="161" height="162"/>
-                </div>
-                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
-                </div>
-                <h6 class="product-title">Yakında Film - 2</h6>
-                <div class="product-price-wrap">
-                  <div class="product-price">Yayın Tarihi</div>
-                </div>
-                <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div><span class="product-badge product-badge-new">Yeni</span>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-              <!-- Product-->
-              <article class="product wow fadeInLeft" data-wow-delay=".05s">
-                <div class="product-figure"><img src="images/product-3-161x162.png" alt="" width="161" height="162"/>
-                </div>
-                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star text-gray-13"></span>
-                </div>
-                <h6 class="product-title">Yakında Film - 3</h6>
-                <div class="product-price-wrap">
-                  <div class="product-price">Yayın Tarihi</div>
-                </div>
-                <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-              <!-- Product-->
-              <article class="product wow fadeInLeft">
-                <div class="product-figure"><img src="images/product-4-161x162.png" alt="" width="161" height="162"/>
-                </div>
-                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
-                </div>
-                <h6 class="product-title">Yakında Film - 4</h6>
-                <div class="product-price-wrap">
-                  <!--<div class="product-price product-price-old">$40.00</div>-->
-                  <div class="product-price">Yayın Tarihi</div>
-                </div>
-                <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
-                </div><span class="product-badge product-badge-sale">Kampanya</span>
-              </article>
-            </div>
+            <%
+            
+                }
+            
+            %>
           </div>
         </div>
       </section>
