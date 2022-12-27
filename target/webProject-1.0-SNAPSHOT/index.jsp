@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/cart.css">
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -143,7 +143,43 @@
                       <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
                                 <span class="popuptext" id="myPopup">
-                                    <img  src="images/avatar2.jpg" alt="foto"></img>
+                                    <div class="movie-tickets">
+                                        <div class="row movie-ticket">
+                                            <img class="cartimg" src="images/avatar2.jpg" alt="foto"></img>
+                                            <span>
+                                                <span class="movie-name">Avatar 2</span>
+                                                <button class="decbuttons" type="button" value="dec">-</button>
+                                                <span class="ticketcount"> 1 </span>
+                                                <button class="addbuttons" type="button" value="add">+</button> 
+                                                <span class="movie-price">30TL</span> 
+                                            </span>
+                                         </div>
+                                        <div class="row movie-ticket">
+                                            <img class="cartimg" src="images/zincirsiz-vizyondakiler.jpg" alt="foto"></img> 
+                                            <span>
+                                                <span class="movie-name">zincirsiz</span>
+                                                <button class="decbuttons" type="button" value="dec">-</button>
+                                                <span class="ticketcount"> 2 </span>
+                                                <button class="addbuttons" type="button" value="add">+</button> 
+                                                <span class="movie-price">30TL</span> 
+                                            </span>
+                                         </div> 
+                                        <div class="row movie-ticket">
+                                            <img class="cartimg" src="images/thebatman-vizyondakiler.jpg" alt="foto"></img> 
+                                            <span>
+                                                <span class="movie-name">thebatman</span>
+                                                <button class="decbuttons" type="button" value="dec">-</button>
+                                                <span class="ticketcount"> 3 </span>
+                                                <button class="addbuttons" type="button" value="add">+</button> 
+                                                <span class="movie-price">30TL</span> 
+                                            </span>
+                                         </div>
+                                    </div>
+                                    <div class="priceinfo">
+                                        <span id="toplamfiyat"> Toplam Fiyat: <span class="fiyat"> 90 </span></span>
+                                        <button class="cartbutton" type="button" value="payment">ODE</button> 
+                                        <button class="cancelbutton" type="button" value="payment">Sil</button> 
+                                    </div>
                                 </span>
                             </div>
                       </li>

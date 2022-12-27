@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/cart.css">
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -64,6 +64,10 @@
         clsMovie movie = new clsMovie();
         ArrayList<clsMovie> movies = new ArrayList<clsMovie>();
         movies = movie.getMovies();
+        
+        clsUser user1 = new clsUser();
+        ArrayList<clsUser> users = new ArrayList<clsUser>();
+        users = user1.getAllUsers();
 
       %>
       <!-- Page Header-->
@@ -282,6 +286,22 @@
           </div>
         </div>
       </section>
+      <div id="kullanicilistesi" class="container">
+       <h5 class="text-spacing-200 text-capitalize">KULLANICI LİSTESİ</h5>
+        <div class="row">
+            <%
+                for(int i = 0; i < users.size(); i++){
+                if(i == 0){
+            %>
+            <div class="list-category-item wow fadeInRight col-sm-3" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">
+            <%out.println(users.get(i).getName());%>(<%out.println(users.get(i).getType());%>)
+            </a></div><%continue;}%>
+            <div class="list-category-item wow fadeInRight col-sm-3" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-2" data-toggle="tab">
+            <%out.println(users.get(i).getName());%>(<%out.println(users.get(i).getType());%>)
+            </a></div>
+            <%}%>
+        </div>
+      </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->

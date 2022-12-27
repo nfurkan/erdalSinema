@@ -1,0 +1,158 @@
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    box-shadow: 0 0 10px 1px #333333;
+    visibility: hidden;
+    width: 300px;
+    height: 500px;
+    background-color:#F5F5F5;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 200%;
+    left: 50%;
+    margin-left: -150px;
+}
+
+/* Popup arrow */
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity:1 ;
+    }
+}
+
+.cartbutton{
+    background-color: #6f42c1;
+    color:white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    font-size: 16px;
+    display:inline;
+    position:static;
+    margin-top: 30px;
+}
+.cancelbutton{
+    background-color: #990000;
+    color:white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    font-size: 16px;
+    display:inline;
+    position:static;
+    margin-top: 30px;
+}
+
+.decbuttons{
+    background-color: #6f42c1;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    display:inline;
+    border-radius: 3px;
+    padding-left:2px;
+    padding-right:2px;
+}
+.addbuttons{
+    background-color: #6f42c1;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    display:inline;
+    border-radius: 3px;
+}
+
+.cartimg {
+      float: left;
+      margin-left: 30px;
+      margin-right: 5px;
+      margin-top: 5px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      border-radius: 8px;
+    }
+    
+    .movie-name {
+      display: block;
+      padding-top: 10px;
+      font-size: 16px;
+      color: black;
+    }
+    
+    .movie-price{
+        color: black;
+        margin-left: 5px;
+        display: block;
+        margin-top: 5px;
+    }
+    
+    .ticketcount{
+        color: black;
+    }
+    
+    .movie-tickets {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 400px;
+        transition: opacity .3s;
+    }
+    
+    
+    .fiyat{
+       margin-right: 6px;
+       padding: 5px;
+       text-transform: uppercase;
+       color:black;
+       font-size: 14px;
+       text-decoration: underline;
+    }
+    
+    .priceinfo{
+        border-top: 2px solid black;
+    }
+    
+    #toplamfiyat{
+        color:#161516;
+    }
+    
+    #kullanicilistesi{
+        color:#161516;
+    }
