@@ -251,7 +251,7 @@
           <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">ERDAL'IN FİLMLERİ</span></h3>
           <div class="row row-lg row-30">
             <%    
-                for(int i = 0; i < movies.size(); i++){ 
+                for(int i = 0; i < movies.size(); i++){
             %>
             <div class="col-sm-6 col-lg-4 col-xl-3">
               <!-- Product-->
@@ -265,7 +265,7 @@
                   <div class="product-price"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
                 <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Filmi Değiştir</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="administrator.jsp">Filmi Değiştir</a></div>
                   <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
                 </div>
                 <%if(movies.get(i).getBroadcasting() == 1){%>
@@ -281,84 +281,8 @@
               </article>
             </div>
             <%
-                }  
+                }
             %>
-          </div>
-        </div>
-      </section>
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="tabs-custom row row-50 justify-content-center flex-lg-row-reverse text-center text-md-left" id="tabs-4">
-            <div class="col-lg-4 col-xl-3">
-              <h5 class="text-spacing-200 text-capitalize">KULLANICI LİSTESİ</h5>
-              <ul class="nav list-category list-category-down-md-inline-block">
-              <%
-                for(int i = 0; i < users.size(); i++){
-                if(i == 0){
-                %>
-                <div class="list-category-item wow fadeInRight col-sm-3" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">
-                <%out.println(users.get(i).getName());%>------<%out.println(users.get(i).getType());%>
-                </a></div><%continue;}%>
-               <div class="list-category-item wow fadeInRight col-sm-3" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-2" data-toggle="tab">
-               <%out.println(users.get(i).getName());%>------<%out.println(users.get(i).getType());%>
-                </a></div>
-               <%}%>
-              </ul>
-            </div>
-            <div class="col-lg-8 col-xl-9">
-              <!-- Tab panes-->
-              <div class="tab-content tab-content-1">
-                <div class="tab-pane fade show active" id="tabs-4-1">
-                  <h4><%out.println(movies.get(0).getName());%></h4>
-                  <p><%out.println(movies.get(0).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(0).getPublishDate());%></p><img src="images/elcamino-vizyondakiler.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(0).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(0).getCategory());%></p>
-                </div>
-                <div class="tab-pane fade" id="tabs-4-2">
-                  <h4><%out.println(movies.get(1).getName());%></h4>
-                  <p><%out.println(movies.get(1).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: </p><img src="images/<%out.println(movies.get(1).getPictureName());%>" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(1).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(1).getCategory());%></p>
-                </div>
-                <div class="tab-pane fade" id="tabs-4-3">
-                  <h4><%out.println(movies.get(2).getName());%></h4>
-                  <p><%out.println(movies.get(2).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(2).getPublishDate());%></p><img src="images/elcamino-vizyondakiler.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(2).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(2).getCategory());%></p>
-                </div>
-                <div class="tab-pane fade" id="tabs-4-4">
-                  <h4><%out.println(movies.get(3).getName());%></h4>
-                  <p><%out.println(movies.get(3).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(3).getPublishDate());%></p><img src="images/elcamino-vizyondakiler.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(3).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(3).getCategory());%></p>
-                </div>
-                  <div class="tab-pane fade" id="tabs-4-5">
-                  <h4><%out.println(movies.get(4).getName());%></h4>
-                  <p><%out.println(movies.get(4).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(4).getPublishDate());%></p><img src="images/elcamino-vizyondakiler.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(4).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(4).getCategory());%></p>
-                </div>
-                  <div class="tab-pane fade" id="tabs-4-6">
-                  <h4><%out.println(movies.get(5).getName());%></h4>
-                  <p><%out.println(movies.get(5).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(5).getPublishDate());%></p><img src="images/elcamino-vizyondakiler.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(5).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(5).getCategory());%></p>
-                </div>
-                  <div class="tab-pane fade" id="tabs-4-7">
-                  <h4><%out.println(movies.get(6).getName());%></h4>
-                  <p><%out.println(movies.get(6).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(6).getPublishDate());%></p><img src="images/elcamino-vizyondakiler.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(6).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(6).getCategory());%></p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
