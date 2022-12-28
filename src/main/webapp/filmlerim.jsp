@@ -235,7 +235,7 @@
             <h3 class="breadcrumbs-custom-title">FİLMLERİM</h3>
             <div class="breadcrumbs-custom-decor"></div>
           </div>
-          <div class="box-transform" style="background-image: url(images/film-background.jpg);"></div>
+          <div class="box-transform" style="background-image: url(images/filmlerim-topbackground.jpg);"></div>
         </div>
         <div class="container">
           <ul class="breadcrumbs-custom-path">

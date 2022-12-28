@@ -138,6 +138,12 @@ public class clsMovie {
         return movieList;
     }
     
+    public void addMovie(){
+    
+    
+    
+    }
+    
     @Override
     public String toString(){
     

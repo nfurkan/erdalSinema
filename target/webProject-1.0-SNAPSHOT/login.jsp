@@ -95,7 +95,7 @@
                   <div class="rd-navbar-main">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.jsp">Ana Sayfa</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.jsp">Ana Sayfa</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="vizyondakiler.jsp">Vizyondakiler</a>
                       </li>
@@ -143,7 +143,7 @@
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Filmlerim</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Giriş</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="login.jsp">Giriş</a>
                       </li>
                       <%
                             }

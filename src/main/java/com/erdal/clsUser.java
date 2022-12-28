@@ -120,7 +120,7 @@ public class clsUser {
         return false;
     }
 
-    public boolean addUser() {
+    public String addUser() {
 
         String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `mail`, `telno`, `type`, `registerdate`)"
                 + "VALUES (NULL,'" + this.getName() + "','" + this.getPassword() + "','" + this.getMail() + "','" + this.getTelno() + "','" + this.getType() + "',CURRENT_TIMESTAMP)";
@@ -136,10 +136,10 @@ public class clsUser {
             } catch (Exception e) {
                 System.out.println(e);
             }
-            return true;
+            return ("");
         }
         else
-            return false;
+            return ("İşlem esnasında bir hata meydana geldi lütfen bütün alanları kontrol ederek bir kez daha deneyiniz.");
     }
     
     public clsUser getUser(String mail) {

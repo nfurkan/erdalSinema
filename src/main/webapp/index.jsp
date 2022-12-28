@@ -118,7 +118,7 @@
                             Cookie cookie= null;
                             Cookie[] cookies= null;
                             cookies = request.getCookies();
-                            if(cookies != null){
+                            if(cookies.length > 1){
                             for(int i = 0; i < cookies.length; i++){
                                 cookie= cookies[i];
                                 if(cookie.getName().equals("SESSIONID") && cookie.getValue() != "" ){
@@ -186,6 +186,7 @@
                       <%
                             }
                           }
+                        }
                           else{
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Filmlerim</a>
@@ -194,7 +195,6 @@
                       </li>
                       <%
                             }
-                        }
                       %>
                     </ul>
                   </div>
