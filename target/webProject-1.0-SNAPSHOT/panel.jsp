@@ -265,10 +265,14 @@
                   <div class="product-price"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
                 <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="administrator.jsp">Filmi Değiştir</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Seans Ayarla</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="administrator.jsp">VİZYONA EKLE</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">KALICI SİL</a></div>
                 </div>
                 <%if(movies.get(i).getBroadcasting() == 1){%>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="administrator.jsp">VİZYONDAN KALDIR</a></div>
+                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">SEANS AYARLA</a></div>
+                </div>
                 <span class="product-badge product-badge-new">VİZYONDA</span>
                 <%  
                     }
@@ -283,9 +287,26 @@
             <%
                 }
             %>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+              <!-- Product-->
+              <article class="product wow fadeInLeft" data-wow-delay=".1s">
+                  <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162"/>
+                </div>
+                <div class="product-rating"><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span>
+                </div>
+                <h6 class="product-title">Yeni Film İsmi</h6>
+                <div class="product-price-wrap">
+                  <div class="product-price">Yeni Film Yayım Tarihi</div>
+                </div>
+                <div class="product-button">
+                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="administrator.jsp">YENİ FİLM EKLE</a></div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
+    </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->

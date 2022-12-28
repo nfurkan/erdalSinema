@@ -248,31 +248,85 @@
       </section>
       <section class="section section-sm section-first bg-default">
         <div class="container">
-          <h3 class="heading-3">... İSİMLİ FİLMİ DEĞİŞTİRİN</h3>
-          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="registerredirect.jsp">
+          <h3 class="heading-3">YENİ FİLM EKLE</h3>
+          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="panel.jsp">
             <div class="row row-20 gutters-20">
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
-                  <input class="form-input" id="contact-your-name-6" type="text" name="name" data-constraints="@Required">
-                  <label class="form-label" for="contact-your-name-6">İsim</label>
+                  <input class="form-input" id="contact-your-name-6" type="text" name="movieName" data-constraints="@Required">
+                  <label class="form-label" for="contact-your-name-6">Film İsmi</label>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
-                  <input class="form-input" id="contact-password-6" type="password" name="password" data-constraints="@Required">
-                  <label class="form-label" for="contact-password-6">Şifre</label>
+                  <input class="form-input" id="contact-password-6" type="text" name="movieDirector" data-constraints="@Required">
+                  <label class="form-label" for="contact-password-6">Yönetmen</label>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
-                  <input class="form-input" id="contact-password-6" type="email" name="email" data-constraints="@Email @Required">
-                  <label class="form-label" for="contact-password-6">E-Mail</label>
+                  <input class="form-input" id="contact-password-6" type="text" name="movieActors" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Aktörler</label>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
-                  <input class="form-input" id="contact-telno-6" type="text" name="telno" data-constraints="@Required">
-                  <label class="form-label" for="contact-telno-6">Telefon No (555-999-88-77)</label>
+                  <input class="form-input" id="contact-telno-6" type="text" name="movieImdb" data-constraints="@Required">
+                  <label class="form-label" for="contact-telno-6">IMDB Puanı</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="movieFormat" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Film Formatı</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="movieCategories" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Kategorileri</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="moviePublishDate" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Yayım Tarihi</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="movieSummary" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Film Özeti</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="movieAgeRestriction" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Yaş Sınırı</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="movieScreenTime" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Film Süresi</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="movieIsPublished" data-constraints="@Email @Required">
+                    <label class="form-label" for="contact-password-6">Film Yayımlandı Mı ?</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="movieIsBroadcasting" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Vizyona Eklensin Mi ?</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 oh-desktop">
+                <div class="form-wrap wow slideInUp">
+                  <input class="form-input" id="contact-password-6" type="text" name="moviePicture" data-constraints="@Email @Required">
+                  <label class="form-label" for="contact-password-6">Film Resmi</label>
                 </div>
               </div>
               <div class="col-lg-4 oh-desktop">
