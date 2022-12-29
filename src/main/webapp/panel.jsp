@@ -124,7 +124,7 @@
                             cookies= request.getCookies();
                             for(int i = 0; i < cookies.length; i++){
                                 cookie= cookies[i];
-                                if(cookie.getName().equals("SESSIONID") && cookie.getValue() != "" ){
+                                if(cookie.getName().equals("SESSIONID") && cookie.getValue() != ""){
                                     loginSuccess = true;
                                     if(cookie.getValue().equals("1erdal")){
                                     isAdmin = true;}
@@ -141,7 +141,7 @@
                       </li>
                       <%
                             }
-                            else{
+                            else{response.sendRedirect(request.getContextPath() + "/login.jsp");
                       %>
                       <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">

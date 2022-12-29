@@ -142,6 +142,7 @@
                       <%
                             }
                             else{
+                                response.sendRedirect(request.getContextPath() + "/login.jsp");
                       %>
                       <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
@@ -154,7 +155,7 @@
                             }
                           }
                           else{
-                            response.sendRedirect(request.getContextPath() + "/login.jsp");
+                              response.sendRedirect(request.getContextPath() + "/login.jsp");
                       %>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="login.jsp">Filmlerim</a>
                       </li>
