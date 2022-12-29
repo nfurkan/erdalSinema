@@ -265,12 +265,18 @@
                   <div class="product-price"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
                 <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="administrator.jsp">VİZYONA EKLE</a></div>
+                    <form action="test.jsp" method="POST">
+                        <input type="hidden" name="movieId" value="<%out.println(movies.get(i).getId());%>"/>
+                        <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="VİZYONA EKLE"></div>
+                    </form>
                   <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">KALICI SİL</a></div>
                 </div>
                 <%if(movies.get(i).getBroadcasting() == 1){%>
                 <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="administrator.jsp">VİZYONDAN KALDIR</a></div>
+                 <form action="test2.jsp" method="POST">
+                  <input type="hidden" name="movieId" value="<%out.println(movies.get(i).getId());%>"/>
+                  <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="VİZYONDAN KALDIR"></div>
+                 </form>
                   <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">SEANS AYARLA</a></div>
                 </div>
                 <span class="product-badge product-badge-new">VİZYONDA</span>

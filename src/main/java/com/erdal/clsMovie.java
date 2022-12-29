@@ -145,13 +145,22 @@ public class clsMovie {
     
     public void removeBroadcast(){
 
-    
+    String sql = "UPDATE `tbMovies` SET `broadcasting`=0 WHERE ID =" + this.getId() + "";
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            stmt.execute(sql);
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     
     }
     
     public void addBroadcast(){
        
-    String sql = "UPDATE `grup11`.`tbMovies` SET `broadcasting` = '1' WHERE `tbMovies`.`ID` =16;";    
+    String sql = "UPDATE `tbMovies` SET `broadcasting`=1 WHERE ID =" + this.getId() + "";
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");

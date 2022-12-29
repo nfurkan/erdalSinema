@@ -114,7 +114,7 @@
     <section class="section section-sm section-first bg-default">
         <div class="container">
           <h3 class="heading-3">Erdal Sinemaya Katılın</h3>
-          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="registerredirect.jsp">
+          <form class="rd-form rd-mailform form-style-1" name="registerform" data-form-output="form-output-global" data-form-type="contact" method="post" action="registerredirect.jsp">
             <div class="row row-20 gutters-20">
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInDown">
@@ -136,8 +136,8 @@
               </div>
               <div class="col-md-6 col-lg-4 oh-desktop">
                 <div class="form-wrap wow slideInUp">
-                  <input class="form-input" id="contact-telno-6" type="text" name="telno" data-constraints="@Required">
-                  <label class="form-label" for="contact-telno-6">Telefon No (555-999-88-77)</label>
+                    <input class="form-input" id="contact-telno-6" type="text" maxlength="10" minlength="10" name="telno" data-constraints="@Required">
+                  <label class="form-label" for="contact-telno-6">Telefon No (5551112233)</label>
                 </div>
               </div>
               <div class="col-lg-4 oh-desktop">
@@ -153,7 +153,7 @@
               </div>
             </div>
             <div class="group-custom-1 group-middle oh-desktop">
-              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Kayıt Ol</button>
+              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit" onClick="allLetter(registerform.name);checktellenght(registerform.telno)">Kayıt Ol</button>
               <!-- Quote Classic-->
               <article class="quote-classic quote-classic-3 wow slideInDown">
                 <div class="quote-classic-text">
