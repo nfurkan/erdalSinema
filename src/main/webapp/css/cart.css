@@ -160,3 +160,8 @@
     .kullanici-liste-item{
         color:#161516;
     }
+    
+    #movieIdInput{
+        visibility: hidden;
+        display: none;
+    }

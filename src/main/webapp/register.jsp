@@ -144,7 +144,7 @@
                 <div class="form-wrap wow slideInDown">
                   <!--Select 2-->
                   <select name="type" class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                    <option value="null">Kullanıcı Tipini Seçiniz</option>
+                    <option value="">Kullanıcı Tipini Seçiniz</option>
                     <option value="tam">Tam</option>
                     <option value="ogrenci">Öğrenci</option>
                     <option value="doktor">Doktor</option>
@@ -153,7 +153,8 @@
               </div>
             </div>
             <div class="group-custom-1 group-middle oh-desktop">
-              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit" onClick="allLetter(registerform.name);checktellenght(registerform.telno)">Kayıt Ol</button>
+              <button class="button button-lg button-primary button-winona wow fadeInRight" type="button" onClick="alldetailscheck(registerform.name,registerform.password,registerform.telno,registerform.email,registerform.type);">Kontrol Et</button>
+                <button style="visibility: hidden;" class="button button-lg button-primary button-winona wow fadeInRight" id="signin" type="submit">Kayıt Ol</button>
               <!-- Quote Classic-->
               <article class="quote-classic quote-classic-3 wow slideInDown">
                 <div class="quote-classic-text">
@@ -166,6 +167,6 @@
       </section>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/basket.js"></script>
+    <script src="js/cart.js"></script>
     </body>
 </html>

@@ -267,7 +267,7 @@
       <section class="section section-last bg-default">
           <br>
           <br>
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">VİZYONDAKİLER</span></h3>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">ÇOK SATANLAR</span></h3>
           <br>
           <br>
         <div class="container-fluid container-inset-0 isotope-wrap">
@@ -288,8 +288,8 @@
               <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp" data-lightgallery="item"><img src="images/fightclub-index.jpg" alt="" width="631" height="587"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="vizyondakiler.jsp#tabs-4-2"><%out.println(movies.get(0).getName());%></a></h6>
-                    <div class="thumbnail-mary-location"><%out.println(movies.get(0).getCategory());%></div>
+                    <h6 class="thumbnail-mary-title"><a href="vizyondakiler.jsp#tabs-4-2"><%out.println(movies.get(3).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(3).getCategory());%></div>
                   </div>
                 </div>
               </article>
@@ -438,7 +438,7 @@
                 <article class="services-terri wow slideInDown">
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
-                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-star"></span>
+                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-dna"></span>
                     <h5 class="services-terri-title"><a href="#">Bilim-Kurgu</a></h5> <!-- 1.s?ra 2.resim -->
                   </div>
                 </article>
@@ -450,7 +450,7 @@
                 <article class="services-terri wow slideInUp">
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
-                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-hamburger"></span>
+                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-speed-fast"></span>
                     <h5 class="services-terri-title"><a href="#">Macera</a></h5> <!-- 1.s?ra 3.resim -->
                   </div>
                 </article>
@@ -462,7 +462,7 @@
                 <article class="services-terri wow slideInDown">
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
-                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-ice-cream"></span>
+                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-skull"></span>
                     <h5 class="services-terri-title"><a href="#">Şiddet</a></h5> <!-- 2.s?ra 1.resim -->
                   </div>
                 </article>
@@ -474,7 +474,7 @@
                 <article class="services-terri wow slideInUp">
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
-                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-coffee-cup"></span>
+                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-saw"></span>
                     <h5 class="services-terri-title"><a href="#">Korku</a></h5> <!-- 2.s?ra 2.resim -->
                   </div>
                 </article>
@@ -486,7 +486,7 @@
                 <article class="services-terri wow slideInDown">
                   <div class="services-terri-figure"><img src="images/cokyakinda-background.jpg" alt="" width="370" height="278"/>
                   </div>
-                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-steak"></span>
+                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-sad"></span>
                     <h5 class="services-terri-title"><a href="#">Drama</a></h5> <!-- 2.s?ra 3.resim -->
                   </div>
                 </article>
@@ -495,41 +495,6 @@
           </div>
         </div>
       </section>
-<!--
-      <!-- Section CTA
-      <section class="primary-overlay section parallax-container" data-parallax-img="images/film-background.jpg">
-        <div class="parallax-content section-xl context-dark text-md-left">
-          <div class="container">
-            <div class="row justify-content-end">
-              <div class="col-sm-8 col-md-7 col-lg-5">
-                <div class="cta-modern">
-                  <h3 class="cta-modern-title wow fadeInRight">Haftan?n En Çok Be?enilen Filmi</h3>
-                  <p class="lead">Film özeti...</p>
-                  <p class="cta-modern-text oh-desktop" data-wow-delay=".1s"><span class="cta-modern-decor wow slideInLeft"></span><span class="d-inline-block wow slideInDown">Yönetmen : Erdal, Yap?mc?: Erdal Yap?m</span></p><a class="button button-md button-secondary-2 button-winona wow fadeInUp" href="#" data-wow-delay=".2s">Devam?na Göz At</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-
-      <!-- Section CTA--
-      <section class="primary-overlay section parallax-container" data-parallax-img="images/film-background.jpg">
-        <div class="parallax-content section-xxl context-dark text-md-left">
-          <div class="container">
-            <div class="row justify-content-end">
-              <div class="col-sm-9 col-md-7 col-lg-5">
-                <div class="cta-modern">
-                  <h3 class="cta-modern-title cta-modern-title-2 oh-desktop"><span class="d-inline-block wow fadeInLeft">Sizin ?çin Seçtik</span></h3>
-                  <p class="cta-modern-text cta-modern-text-2 oh-desktop" data-wow-delay=".1s"><span class="cta-modern-decor cta-modern-decor-2 wow slideInLeft"></span><span class="d-inline-block wow slideInUp">Film zevkinizi dikkate alarak size özel seçti?imiz filmi kaç?rmay?n!</span></p><a class="button button-lg button-secondary button-winona wow fadeInRight" href="contacts.html" data-wow-delay=".2s">Göz At</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>-->
       <!-- Section Services  Last section-->
       <section class="section section-sm bg-default">
         <div class="container">
@@ -566,13 +531,13 @@
         </div>
       </section>
         <!-- What We Offer-->
-      <section class="section section-xl bg-default">
+      <!--<section class="section section-xl bg-default">
         <div class="container">
           <h3 class="wow fadeInLeft">İZLEYİCİLERİMİZ NE DİYOR?</h3>
         </div>
         <div class="container container-style-1">
           <div class="owl-carousel owl-style-12" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" data-xl-margin="45" data-autoplay="true" data-nav="true" data-center="true" data-smart-speed="400">
-            <!-- Quote Tara-->
+            <!-- Quote Tara
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
@@ -584,7 +549,7 @@
               <h6 class="quote-tara-author">Kullanıcı - 1</h6>
               <div class="quote-tara-status">Üye</div>
             </article>
-            <!-- Quote Tara-->
+            <!-- Quote Tara
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
@@ -596,7 +561,7 @@
               <h6 class="quote-tara-author">Kullanıcı - 2</h6>
               <div class="quote-tara-status">Üye</div>
             </article>
-            <!-- Quote Tara-->
+            <!-- Quote Tara
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
@@ -608,7 +573,7 @@
               <h6 class="quote-tara-author">Kullanıcı - 3</h6>
               <div class="quote-tara-status">Üye</div>
             </article>
-            <!-- Quote Tara-->
+            <!-- Quote Tara
             <article class="quote-tara">
               <div class="quote-tara-caption">
                 <div class="quote-tara-text">
@@ -622,61 +587,13 @@
             </article>
           </div>
         </div>
-      </section>
-      <!-- Tell-->
-      <section class="section section-sm section-first bg-default">
-        <div class="container">
-          <h3 class="heading-3">BİZİ DEĞERLENDİRİN!</h3>
-          <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-            <div class="row row-20 gutters-20">
-              <div class="col-md-6 col-lg-4 oh-desktop">
-                <div class="form-wrap wow slideInDown">
-                  <input class="form-input" id="contact-your-name-6" type="text" name="name" data-constraints="@Required">
-                  <label class="form-label" for="contact-your-name-6">İsminiz*</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 oh-desktop">
-                <div class="form-wrap wow slideInUp">
-                  <input class="form-input" id="contact-email-6" type="email" name="email" data-constraints="@Email @Required">
-                  <label class="form-label" for="contact-email-6">E-mail Adresiniz*</label>
-                </div>
-              </div>
-              <div class="col-lg-4 oh-desktop">
-                <div class="form-wrap wow slideInDown">
-                  <!--Select 2-->
-                  <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                    <option value="1">Kategori Seçin</option>
-                    <option value="2">İstek</option>
-                    <option value="3">Şikayet</option>
-                    <option value="4">Görüş</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-wrap wow fadeIn">
-                  <label class="form-label" for="contact-message-6">Mesajınız...</label>
-                  <textarea class="form-input textarea-lg" id="contact-message-6" name="message" data-constraints="@Required"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="group-custom-1 group-middle oh-desktop">
-              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Gönder</button>
-              <!-- Quote Classic-->
-              <article class="quote-classic quote-classic-3 wow slideInDown">
-                <div class="quote-classic-text">
-                  <p class="q">Lütfen mesajlarınızda topluluk kurallarına uyunuz.</p>
-                </div>
-              </article>
-            </div>
-          </form>
-        </div>
-      </section>
+      </section>-->
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/basket.js"></script>
+    <script src="js/cart.js"></script>
     <!-- coded by Himic-->
   </body>
 </html>

@@ -12,7 +12,7 @@
     </head>
     <body>
         <%
-        int id = 16;
+        int id = Integer.parseInt(request.getParameter("movieId"));
         clsMovie movie = new clsMovie();
         movie.setId(id);
         movie.addBroadcast();

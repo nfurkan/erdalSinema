@@ -330,94 +330,9 @@
           </div>
         </div>
       </section>
-      <!--Contacts-->
-      <!--<section class="section section-lg bg-default text-md-left">
-        <div class="container">
-          <div class="row row-60 justify-content-center">
-            <div class="col-lg-8">
-              <h4 class="text-spacing-25 text-transform-none">Get in Touch</h4>
-              <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="row row-20 gutters-20">
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <input class="form-input" id="contact-your-name-5" type="text" name="name" data-constraints="@Required">
-                      <label class="form-label" for="contact-your-name-5">Your Name*</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <input class="form-input" id="contact-email-5" type="email" name="email" data-constraints="@Email @Required">
-                      <label class="form-label" for="contact-email-5">Your E-mail*</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <!--Select 2
-                      <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                        <option value="1">Select a Service</option>
-                        <option value="2">Dine-In</option>
-                        <option value="3">Carry-Out</option>
-                        <option value="4">Event Catering</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <input class="form-input" id="contact-phone-5" type="text" name="phone" data-constraints="@Numeric">
-                      <label class="form-label" for="contact-phone-5">Your Phone*</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-wrap">
-                      <label class="form-label" for="contact-message-5">Message</label>
-                      <textarea class="form-input textarea-lg" id="contact-message-5" name="message" data-constraints="@Required"></textarea>
-                    </div>
-                  </div>
-                </div>
-                <button class="button button-secondary button-winona" type="submit">Contact us</button>
-              </form>
-            </div>
-            <div class="col-lg-4">
-              <div class="aside-contacts">
-                <div class="row row-30">
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">Get social</p>
-                    <ul class="list-inline contacts-social-list list-inline-sm">
-                      <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                      <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                      <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                      <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">Phone</p>
-                    <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
-                      <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                      <div class="unit-body"><a class="phone" href="tel:#">1-800-1234-567</a></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">E-mail</p>
-                    <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
-                      <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
-                      <div class="unit-body"><a class="mail" href="mailto:#">info@demolink.org</a></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">Address</p>
-                    <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
-                      <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                      <div class="unit-body"><a class="address" href="#">6036 Richmond hwy., <br class="d-md-none">Alexandria, VA, 2230</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>-->
-      <a class="button button-xl button-primary button-winona" href="#">FİLM ÖNER</a>
+      <button style="visibility: visible;" style="text-align: center;" style="background-position: center center;" class="button button-Ig button-primary button-winona" onclick="ShowIt()">Film Öner</button>
       <section class="section section-lg bg-gray-100 text-left section-relative">
+      <section style="visibility: hidden" id="section-hidden">
         <div class="container">
           <div class="row row-60 justify-content-center justify-content-xxl-between">
             <div class="col-lg-6 col-xxl-5 position-static">
@@ -436,9 +351,9 @@
                     <h5 class="font-weight-normal text-transform-none text-spacing-75">XX/XX/XXXX tarihinde şu filmi izlediniz</h5>
                     <p>FİLM ADI - KATEGORİSİ</p>
                   </div>
-                  <div class="tab-pane fade show active" id="tabs-5-4">
-                    <h5 class="font-weight-normal text-transform-none text-spacing-75">Sizin için seçtiğimiz film:</h5>
-                    <p>FİLM ADI - KATEGORİSİ</p>
+                  <div class="tab-pane fade" id="tabs-5-4">
+                    <h5 class="font-weight-normal text-transform-none text-spacing-75">Sizin için seçtiğimiz film:</h5> 
+                    <p id="randomp">FİLM ADI - KATEGORİSİ</p>
                   </div>
                 </div>
                 <div class="list-history-wrap">
@@ -463,12 +378,15 @@
             </div>
           </div>
         </div>
+       </section>
       </section>
+    <br>
+    <br>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/basket.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>

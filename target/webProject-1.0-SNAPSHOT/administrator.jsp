@@ -343,7 +343,7 @@
               </div>
             </div>
             <div class="group-custom-1 group-middle oh-desktop">
-              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Kayıt Ol</button>
+              <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Filmi Ekle</button>
               <!-- Quote Classic-->
               <article class="quote-classic quote-classic-3 wow slideInDown">
                 <div class="quote-classic-text">
@@ -359,7 +359,7 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/basket.js"></script>
+    <script src="js/cart.js"></script>
     <!-- coded by Himic-->
   </body>
 </html>
