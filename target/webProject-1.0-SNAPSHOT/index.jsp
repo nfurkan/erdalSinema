@@ -274,18 +274,18 @@
           <div class="row row-10 gutters-10 isotope" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft"><a class="thumbnail-mary-figure" href="images/gallery-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/lotrkapak.jpg" alt="" width="310" height="585"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp"><img src="images/<%out.println(movies.get(2).getPictureName());%>-coksatanlar.jpg" alt="" width="310" height="585"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">YÜZÜKLERİN EFENDİSİ - KRALIN DÖNÜŞÜ</a></h6>
-                    <div class="thumbnail-mary-location">MACERA</div>
+                    <h6 class="thumbnail-mary-title"><a href="#"><%out.println(movies.get(2).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(2).getCategory());%></div>
                   </div>
                 </div>
               </article>
             </div>
             <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp" data-lightgallery="item"><img src="images/fightclub-index.jpg" alt="" width="631" height="587"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp"><img src="images/<%out.println(movies.get(3).getPictureName());%>-coksatanlar.jpg" alt="" width="631" height="587"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
                     <h6 class="thumbnail-mary-title"><a href="vizyondakiler.jsp#tabs-4-2"><%out.println(movies.get(3).getName());%></a></h6>
@@ -296,55 +296,55 @@
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInDown"><a class="thumbnail-mary-figure" href="images/gallery-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/erryanikurtarmak.jpg" alt="" width="311" height="289"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInDown"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp"><img src="images/<%out.println(movies.get(4).getPictureName());%>-coksatanlar.jpg" alt="" width="311" height="289"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">ER RYAN'I KURTARMAK</a></h6>
-                    <div class="thumbnail-mary-location">AKSİYON</div>
+                    <h6 class="thumbnail-mary-title"><a href="#"><%out.println(movies.get(4).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(4).getCategory());%></div>
                   </div>
                 </div>
               </article>
             </div>
             <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary wow slideInUp"><a class="thumbnail-mary-figure" href="images/gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/interstellar.jpg" alt="" width="631" height="289"/></a>
+              <article class="thumbnail thumbnail-mary wow slideInUp"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp"><img src="images/<%out.println(movies.get(0).getPictureName());%>-coksatanlar.jpg" alt="" width="631" height="289"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">YILDIZLAR ARASI</a></h6>
-                    <div class="thumbnail-mary-location">BİLİM-KURGU</div>
+                    <h6 class="thumbnail-mary-title"><a href="#"><%out.println(movies.get(0).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(0).getCategory());%></div>
                   </div>
                 </div>
               </article>
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInUp"><a class="thumbnail-mary-figure" href="images/gallery-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/leon.jpg" alt="" width="311" height="289"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInUp"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp"><img src="images/<%out.println(movies.get(1).getPictureName());%>-coksatanlar.jpg" alt="" width="311" height="289"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">LEON</a></h6>
-                    <div class="thumbnail-mary-location">DRAMA</div>
+                    <h6 class="thumbnail-mary-title"><a href="#"><%out.println(movies.get(1).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(1).getCategory());%></div>
                   </div>
                 </div>
               </article>
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInRight"><a class="thumbnail-mary-figure" href="images/gallery-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/elcamino.jpg" alt="" width="311" height="289"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInRight"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp"><img src="images/<%out.println(movies.get(5).getPictureName());%>-coksatanlar.jpg" alt="" width="311" height="289"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">EL CAMINO</a></h6>
-                    <div class="thumbnail-mary-location">SUÇ</div>
+                    <h6 class="thumbnail-mary-title"><a href="#"><%out.println(movies.get(5).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(5).getCategory());%></div>
                   </div>
                 </div>
               </article>
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
               <!-- Thumbnail Mary-->
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft"><a class="thumbnail-mary-figure" href="images/gallery-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/halloween.jpg" alt="" width="311" height="289"/></a>
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft"><a class="thumbnail-mary-figure" href="vizyondakiler.jsp"><img src="images/<%out.println(movies.get(6).getPictureName());%>-coksatanlar.jpg" alt="" width="311" height="289"/></a>
                 <div class="thumbnail-mary-caption">
                   <div>
-                    <h6 class="thumbnail-mary-title"><a href="#">CADILAR BAYRAMI</a></h6>
-                    <div class="thumbnail-mary-location">KORKU</div>
+                    <h6 class="thumbnail-mary-title"><a href="#"><%out.println(movies.get(6).getName());%></a></h6>
+                    <div class="thumbnail-mary-location"><%out.println(movies.get(6).getCategory());%></div>
                   </div>
                 </div>
               </article>
@@ -358,42 +358,18 @@
         <div class="container">
           <h3 class="oh"><span class="d-inline-block wow slideInUp" data-wow-delay="0s">ÇOK YAKINDA</span></h3>
           <div class="row row-lg row-40 justify-content-center">
+           <%for(int i = 0; i < movies.size(); i++){
+           if(movies.get(i).getPublished() == 0){%>
             <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".2s" data-wow-duration="1s">
               <!-- Team Modern-->
-              <article class="team-modern"><a class="team-modern-figure" href="#"><img src="images/deadpool-3.jpg" alt="" width="270" height="236"/></a>
+              <article class="team-modern"><a class="team-modern-figure" href="#"><img src="images/<%out.println(movies.get(i).getPictureName());%>-cokyakinda.jpg" alt="" width="270" height="236"/></a>
                 <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">DEADPOOL 3</a></h6>
-                  <div class="team-modern-status">2024</div>
+                    <h6 class="team-modern-name"><a href="#"><%out.println(movies.get(i).getName());%></a></h6>
+                  <div class="team-modern-status"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
               </article>
             </div>
-            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0s" data-wow-duration="1s">
-              <!-- Team Modern-->
-              <article class="team-modern"><a class="team-modern-figure" href="#"><img src="images/avatar2.jpg" alt="" width="270" height="236"/></a>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">AVATAR 2</a></h6>
-                  <div class="team-modern-status">2022</div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay=".1s" data-wow-duration="1s">
-              <!-- Team Modern-->
-              <article class="team-modern"><a class="team-modern-figure" href="#"><img src="images/joker2.jpg" alt="" width="270" height="236"/></a>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Joker: FOLIE Â DEUX</a></h6>
-                  <div class="team-modern-status">2024</div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
-              <!-- Team Modern-->
-              <article class="team-modern"><a class="team-modern-figure" href="#"><img src="images/johnwick4.jpg" alt="" width="270" height="236"/></a>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">JOHN WICK 4</a></h6>
-                  <div class="team-modern-status">2023</div>
-                </div>
-              </article>
-            </div>
+            <%}}%>
           </div>
         </div>
       </section>
