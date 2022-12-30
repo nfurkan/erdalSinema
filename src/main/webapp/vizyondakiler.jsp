@@ -143,7 +143,24 @@
                       <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
                                 <span class="popuptext" id="myPopup">
-                                    <img  src="images/avatar2.jpg" alt="foto"></img>
+                                    <div class="movie-tickets">
+                                      <%%>
+                                        <div class="row movie-ticket">
+                                            <img class="cartimg" src="images/avatar2.jpg" alt="foto"></img>
+                                            <span>
+                                                <span class="movie-name">Avatar 2</span>
+                                                <button class="decbuttons" type="button" value="dec">-</button>
+                                                <span class="ticketcount"> 1 </span>
+                                                <button class="addbuttons" type="button" value="add">+</button> 
+                                                <span class="movie-price">30TL</span> 
+                                            </span>
+                                         </div>
+                                    </div>
+                                    <div class="priceinfo">
+                                        <span id="toplamfiyat"> Toplam Fiyat: <span class="fiyat"> 90 </span></span>
+                                        <button class="cartbutton" type="button" value="payment">ODE</button> 
+                                        <button class="cancelbutton" type="button" value="payment">Sil</button> 
+                                    </div>
                                 </span>
                             </div>
                       </li>
@@ -264,8 +281,14 @@
                   <div class="product-price"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
                 <div class="product-button">
-                  <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="odeme.jsp">Sepete Ekle</a></div>
-                  <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Film Detayları</a></div>
+                    <form action="vizyondakiler.jsp" method="POST">
+                        <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
+                        <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="SEPETE EKLE"></div>
+                    </form>
+                    <form action="vizyondakiler.jsp" method="POST">
+                        <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
+                        <div class="button-wrap"><input class="button button-xs button-secondary button-winona" type="submit" value="FİLM DETAYLARI"></div>
+                    </form>
                 </div>
                 <span class="product-badge product-badge-new">VİZYONDA</span>
                 <%  

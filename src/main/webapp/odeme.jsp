@@ -11,6 +11,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Ödeme Sayfasındasın.</h1>
+        <%  clsUser userrr = new clsUser();
+            userrr = userrr.getUser("furkan@hotmail.com");
+            for(int i = 0; i < userrr.getWatchedMovies().length; i++){
+            
+                out.println(userrr.getWatchedMovies()[i]);
+                out.println("<br>");
+            
+            }
+        %>
     </body>
 </html>

@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
-
 /**
  *
  * @author PC
@@ -18,10 +17,14 @@ import java.util.Date;
 public class clsUser {
 
     int id;
-    String name, password, type, mail, telno, temp, sessionId, watchedMovies;
+    String name, password, type, mail, telno, temp, sessionId;
+    String watchedMovies;
+    Arraylist<clsMovies> watchedMoviesList;
 
-    public String getWatchedMovies() {
-        return watchedMovies;
+    public String[] getWatchedMovies() {
+        String[] arrWatchedMovies;
+        arrWatchedMovies = watchedMovies.split(",");
+        return arrWatchedMovies;
     }
     public void setWatchedMovies(String watchedMovies) {
         this.watchedMovies = watchedMovies;

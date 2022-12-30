@@ -266,7 +266,7 @@
                 </div>
                 <div class="product-button">
                     <form action="test.jsp" method="POST">
-                        <input type="hidden" name="movieId" value="<%out.println(movies.get(i).getId());%>"/>
+                        <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
                         <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="VİZYONA EKLE"></div>
                     </form>
                   <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">KALICI SİL</a></div>
@@ -274,7 +274,7 @@
                 <%if(movies.get(i).getBroadcasting() == 1){%>
                 <div class="product-button">
                  <form action="test2.jsp" method="POST">
-                  <input type="hidden" name="movieId" value="<%out.println(movies.get(i).getId());%>"/>
+                  <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
                   <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="VİZYONDAN KALDIR"></div>
                  </form>
                   <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">SEANS AYARLA</a></div>
@@ -283,7 +283,7 @@
                 <%  
                     }
                 %>
-                <%if(movies.get(i).getPublished() == 0){%>
+                <%if(movies.get(i).getPublished() == 0 && movies.get(i).getBroadcasting() == 0){%>
                 <span class="product-badge product-badge-sale">YAKINDA</span>
                 <%  
                     }

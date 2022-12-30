@@ -143,7 +143,43 @@
                       <li class="rd-nav-item">
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
                                 <span class="popuptext" id="myPopup">
-                                    <img  src="images/silincek.jpg" alt="foto">
+                                    <div class="movie-tickets">
+                                        <div class="row movie-ticket">
+                                            <img class="cartimg" src="images/avatar2.jpg" alt="foto"></img>
+                                            <span>
+                                                <span class="movie-name">Avatar 2</span>
+                                                <button class="decbuttons" type="button" value="dec">-</button>
+                                                <span class="ticketcount"> 1 </span>
+                                                <button class="addbuttons" type="button" value="add">+</button> 
+                                                <span class="movie-price">30TL</span> 
+                                            </span>
+                                         </div>
+                                        <div class="row movie-ticket">
+                                            <img class="cartimg" src="images/zincirsiz-vizyondakiler.jpg" alt="foto"></img> 
+                                            <span>
+                                                <span class="movie-name">zincirsiz</span>
+                                                <button class="decbuttons" type="button" value="dec">-</button>
+                                                <span class="ticketcount"> 2 </span>
+                                                <button class="addbuttons" type="button" value="add">+</button> 
+                                                <span class="movie-price">30TL</span> 
+                                            </span>
+                                         </div> 
+                                        <div class="row movie-ticket">
+                                            <img class="cartimg" src="images/thebatman-vizyondakiler.jpg" alt="foto"></img> 
+                                            <span>
+                                                <span class="movie-name">thebatman</span>
+                                                <button class="decbuttons" type="button" value="dec">-</button>
+                                                <span class="ticketcount"> 3 </span>
+                                                <button class="addbuttons" type="button" value="add">+</button> 
+                                                <span class="movie-price">30TL</span> 
+                                            </span>
+                                         </div>
+                                    </div>
+                                    <div class="priceinfo">
+                                        <span id="toplamfiyat"> Toplam Fiyat: <span class="fiyat"> 90 </span></span>
+                                        <button class="cartbutton" type="button" value="payment">ODE</button> 
+                                        <button class="cancelbutton" type="button" value="payment">Sil</button> 
+                                    </div>
                                 </span>
                             </div>
                       </li>

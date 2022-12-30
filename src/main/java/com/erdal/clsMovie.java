@@ -4,13 +4,15 @@
  */
 package com.erdal;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  *
- * @author PC
+ * @author furkan
  */
 public class clsMovie {
     
@@ -188,7 +190,5 @@ public class clsMovie {
                 "<br>screenTime: " + this.screenTime +
                 "<br>published: " + this.published + "<br><br><br>"
                 );
-    
     }
-    
 }
