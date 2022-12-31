@@ -5,6 +5,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Date"%>
 <jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
+<jsp:useBean id="cart" class="com.erdal.clsCart" scope="session"/>
 <html class="wide wow-animation" lang="en">
   <head>
     <title>Admin Paneli</title>

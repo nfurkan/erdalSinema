@@ -140,6 +140,40 @@ public class clsMovie {
         return movieList;
     }
     
+    public clsMovie getMovie(int id){
+        
+        clsMovie newMovie = new clsMovie();
+        
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            String sql = "SELECT * FROM `tbMovies` WHERE ID =" + id + "";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                newMovie.setId(rs.getInt(1));
+                newMovie.setName(rs.getString(2));
+                newMovie.setDirector(rs.getString(3));
+                newMovie.setActors(rs.getString(4));
+                newMovie.setPoint(rs.getFloat(5));
+                newMovie.setFormat(rs.getString(6));
+                newMovie.setCategory(rs.getString(7));
+                newMovie.setPublishDate(rs.getString(8));
+                newMovie.setSummary(rs.getString(9));
+                newMovie.setAgeRestriction(rs.getInt(10));
+                newMovie.setScreenTime(rs.getInt(11));
+                newMovie.setPublished(rs.getInt(12));
+                newMovie.setBroadcasting(rs.getInt(13));
+                newMovie.setPictureName(rs.getString(14));
+            }
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        return newMovie;
+    }
+    
     public void addMovie(){
     
     

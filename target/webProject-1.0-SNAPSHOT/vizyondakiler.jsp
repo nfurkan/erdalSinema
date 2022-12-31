@@ -3,8 +3,10 @@
 <%@page import="com.erdal.*"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page import="java.util.Date"%>
 <jsp:useBean id="user" class="com.erdal.clsUser" scope="session"/>
+<jsp:useBean id="cart" class="com.erdal.clsCart" scope="session"/>
 <html class="wide wow-animation" lang="en">
   <head>
     <title>Vizyondakiler</title>
@@ -64,7 +66,6 @@
         clsMovie movie = new clsMovie();
         ArrayList<clsMovie> movies = new ArrayList<clsMovie>();
         movies = movie.getMovies();
-
     %>
       <!-- Page Header-->
       <header class="section page-header">
@@ -144,22 +145,29 @@
                             <div class="popup" onclick="myFunction()"><img src="images/basket.png" alt="basket">
                                 <span class="popuptext" id="myPopup">
                                     <div class="movie-tickets">
-                                      <%%>
+                                      <%String[] cartMovieNames, cartMoviePictureNames;
+                                        cartMovieNames = cart.getCartMovieNames();
+                                        cartMoviePictureNames = cart.getCartMoviePictureNames();
+                                        if(!(cartMovieNames[0].equals("")) && !(cartMoviePictureNames[0].equals(""))){
+                                        for(int i = 0; i < cartMovieNames.length; i++){
+                                      %>
                                         <div class="row movie-ticket">
-                                            <img class="cartimg" src="images/avatar2.jpg" alt="foto"></img>
+                                            <img class="cartimg" src="images/<%out.println(cartMoviePictureNames[i]);%>-vizyondakiler.jpg" alt="foto"></img>
                                             <span>
-                                                <span class="movie-name">Avatar 2</span>
+                                                <span class="movie-name"><%out.println(cartMovieNames[i]);%></span>
                                                 <button class="decbuttons" type="button" value="dec">-</button>
                                                 <span class="ticketcount"> 1 </span>
                                                 <button class="addbuttons" type="button" value="add">+</button> 
                                                 <span class="movie-price">30TL</span> 
                                             </span>
                                          </div>
+                                      <%}
+                                      }%>
                                     </div>
                                     <div class="priceinfo">
-                                        <span id="toplamfiyat"> Toplam Fiyat: <span class="fiyat"> 90 </span></span>
-                                        <button class="cartbutton" type="button" value="payment">ODE</button> 
-                                        <button class="cancelbutton" type="button" value="payment">Sil</button> 
+                                        <span id="toplamfiyat"> Toplam Fiyat: <span class="fiyat"><%out.println(cart.getTotalPrice());%></span></span>
+                                        <button class="cartbutton" type="button" value="payment">Öde</button>
+                                        <button class="cancelbutton" type="button" value="payment">Sil</button>
                                     </div>
                                 </span>
                             </div>
@@ -281,7 +289,7 @@
                   <div class="product-price"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
                 <div class="product-button">
-                    <form action="vizyondakiler.jsp" method="POST">
+                    <form action="cart.jsp" method="POST">
                         <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
                         <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="SEPETE EKLE"></div>
                     </form>

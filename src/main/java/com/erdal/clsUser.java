@@ -19,7 +19,7 @@ public class clsUser {
     int id;
     String name, password, type, mail, telno, temp, sessionId;
     String watchedMovies;
-    Arraylist<clsMovies> watchedMoviesList;
+    ArrayList<clsMovie> watchedMoviesList;
 
     public String[] getWatchedMovies() {
         String[] arrWatchedMovies;
