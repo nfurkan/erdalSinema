@@ -113,8 +113,8 @@
     
     .movie-name {
       display: block;
-      padding-top: 10px;
-      font-size: 20px;
+      font-size: 18px;
+      word-break: break-all;
       color: black;
       font-weight: bold;
     }
@@ -137,6 +137,11 @@
         overflow-x: hidden;
         max-height: 300px;
         transition: opacity .3s;
+    }
+    
+    .movie-info{
+        max-width: 170px;
+        float:right;
     }
     
     
