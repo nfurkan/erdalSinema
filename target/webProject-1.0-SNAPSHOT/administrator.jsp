@@ -331,17 +331,6 @@
                   <label class="form-label" for="contact-password-6">Film Resmi</label>
                 </div>
               </div>
-              <div class="col-lg-4 oh-desktop">
-                <div class="form-wrap wow slideInDown">
-                  <!--Select 2-->
-                  <select name="type" class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                    <option value="null">Kullanıcı Tipini Seçiniz</option>
-                    <option value="tam">Tam</option>
-                    <option value="ogrenci">Öğrenci</option>
-                    <option value="doktor">Doktor</option>
-                  </select>
-                </div>
-              </div>
             </div>
             <div class="group-custom-1 group-middle oh-desktop">
               <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Filmi Ekle</button>
