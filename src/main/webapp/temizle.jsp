@@ -13,9 +13,12 @@
     </head>
     <body>
         <%  
-            if(cart.getTotalPrice() == 0)
+            if(cart.getTotalPrice() != 0){
+            cart.clearCart();
             response.sendRedirect(request.getContextPath() + "/vizyondakiler.jsp");
-            
+            }
+            else
+            response.sendRedirect(request.getContextPath() + "/vizyondakiler.jsp");
         %>
     </body>
 </html>

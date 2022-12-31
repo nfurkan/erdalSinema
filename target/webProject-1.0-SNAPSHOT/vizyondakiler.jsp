@@ -158,7 +158,7 @@
                                                 <button class="decbuttons" type="button" value="dec">-</button>
                                                 <span class="ticketcount"> 1 </span>
                                                 <button class="addbuttons" type="button" value="add">+</button> 
-                                                <span class="movie-price">30TL</span> 
+                                                <span class="movie-price">30 TL</span> 
                                             </span>
                                          </div>
                                       <%}
@@ -166,8 +166,12 @@
                                     </div>
                                     <div class="priceinfo">
                                         <span id="toplamfiyat"> Toplam Fiyat: <span class="fiyat"><%out.println(cart.getTotalPrice());%></span></span>
-                                        <button class="cartbutton" type="button" value="payment">Öde</button>
-                                        <button class="cancelbutton" type="button" value="payment">Sil</button>
+                                        <form action="odeme.jsp" method="POST">
+                                        <input class="cartbutton" type="submit" value="Öde">
+                                        </form>
+                                        <form action="temizle.jsp" method="POST">
+                                        <input class="cancelbutton" type="submit" value="Temizle">
+                                        </form>
                                     </div>
                                 </span>
                             </div>
@@ -293,7 +297,7 @@
                         <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
                         <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="SEPETE EKLE"></div>
                     </form>
-                    <form action="vizyondakiler.jsp" method="POST">
+                    <form action="filmdetaylari.jsp" method="POST">
                         <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
                         <div class="button-wrap"><input class="button button-xs button-secondary button-winona" type="submit" value="FİLM DETAYLARI"></div>
                     </form>

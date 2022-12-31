@@ -266,7 +266,7 @@
                   <div class="product-price"><%out.println(movies.get(i).getPublishDate());%></div>
                 </div>
                 <div class="product-button">
-                    <form action="test.jsp" method="POST">
+                    <form action="vizyonaEkle.jsp" method="POST">
                         <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
                         <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="VİZYONA EKLE"></div>
                     </form>
@@ -274,7 +274,7 @@
                 </div>
                 <%if(movies.get(i).getBroadcasting() == 1){%>
                 <div class="product-button">
-                 <form action="test2.jsp" method="POST">
+                 <form action="vizyondanKaldir.jsp" method="POST">
                   <input type="hidden" name="movieId" value=<%out.println(movies.get(i).getId());%>/>
                   <div class="button-wrap"><input class="button button-xs button-primary button-winona" type="submit" value="VİZYONDAN KALDIR"></div>
                  </form>

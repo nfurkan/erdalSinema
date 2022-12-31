@@ -50,4 +50,12 @@ public class clsCart {
         return totalPrice;
     }
     
+    public void clearCart(){
+
+        this.cartMovieNames = "";
+        this.cartMoviePictureNames = "";
+        this.totalPrice = 0;
+    
+    }
+    
 }

@@ -12,14 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%  clsUser userrr = new clsUser();
-            userrr = userrr.getUser("furkan@hotmail.com");
-            for(int i = 0; i < userrr.getWatchedMovies().length; i++){
+        <%  
+            if(cart.getTotalPrice() == 0)
+            response.sendRedirect(request.getContextPath() + "/vizyondakiler.jsp");
             
-                out.println(userrr.getWatchedMovies()[i]);
-                out.println("<br>");
-            
-            }
         %>
     </body>
 </html>
