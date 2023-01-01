@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/cart.css">
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -65,7 +65,20 @@
         clsMovie movie = new clsMovie();
         ArrayList<clsMovie> movies = new ArrayList<clsMovie>();
         movies = movie.getMovies();
-
+        
+        String[] usersWatchedMovies = user.getWatchedMovies();
+        ArrayList<clsMovie> usersMovies = new ArrayList<clsMovie>();
+        
+        for(int i = 0; i < movies.size(); i++){
+        
+            if(movies.get(i).getName().equals(usersWatchedMovies[i])){
+                
+                int id = movies.get(i).getId();
+                usersMovies.add(movie.getMovie(id));
+        
+            }
+        }
+        
     %>
       <!-- Page Header-->
       <header class="section page-header">
@@ -301,55 +314,19 @@
             <div class="col-lg-8 col-xl-9">
               <!-- Tab panes-->
               <div class="tab-content tab-content-1">
+                <%
+                  for(int i = 0; i < usersMovies.size(); i++){
+              %>
+              <div class="tab-content tab-content-1">
                 <div class="tab-pane fade show active" id="tabs-4-1">
-                  <h4><%out.println(movies.get(0).getName());%></h4>
-                  <p><%out.println(movies.get(0).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(0).getPublishDate());%></p><img src="images/<%out.println(movies.get(0).getName());%>-filmlerim.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(0).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(0).getCategory());%></p>
+                  <h4><%out.println(usersMovies.get(i).getName());%></h4>
+                  <p><%out.println(movies.get(i).getSummary());%></p>
+                  <p>Gösterime giriş tarihi: <%out.println(movies.get(i).getPublishDate());%></p><img src="images/<%out.println(movies.get(i).getPictureName());%>-filmlerim.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(movies.get(i).getDirector());%></p>
+                  <p>Kategori: <%out.println(movies.get(i).getCategory());%></p>
                 </div>
-                <div class="tab-pane fade" id="tabs-4-2">
-                  <h4><%out.println(movies.get(1).getName());%></h4>
-                  <p><%out.println(movies.get(1).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: </p><img src="images/<%out.println(movies.get(1).getPictureName());%>" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(1).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(1).getCategory());%></p>
-                </div>
-                <div class="tab-pane fade" id="tabs-4-3">
-                  <h4><%out.println(movies.get(2).getName());%></h4>
-                  <p><%out.println(movies.get(2).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(2).getPublishDate());%></p><img src="images/elcamino-filmlerim.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(2).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(2).getCategory());%></p>
-                </div>
-                <div class="tab-pane fade" id="tabs-4-4">
-                  <h4><%out.println(movies.get(3).getName());%></h4>
-                  <p><%out.println(movies.get(3).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(3).getPublishDate());%></p><img src="images/elcamino-filmlerim.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(3).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(3).getCategory());%></p>
-                </div>
-                  <div class="tab-pane fade" id="tabs-4-5">
-                  <h4><%out.println(movies.get(4).getName());%></h4>
-                  <p><%out.println(movies.get(4).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(4).getPublishDate());%></p><img src="images/elcamino-filmlerim.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(4).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(4).getCategory());%></p>
-                </div>
-                  <div class="tab-pane fade" id="tabs-4-6">
-                  <h4><%out.println(movies.get(5).getName());%></h4>
-                  <p><%out.println(movies.get(5).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(5).getPublishDate());%></p><img src="images/elcamino-filmlerim.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(5).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(5).getCategory());%></p>
-                </div>
-                  <div class="tab-pane fade" id="tabs-4-7">
-                  <h4><%out.println(movies.get(6).getName());%></h4>
-                  <p><%out.println(movies.get(6).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(6).getPublishDate());%></p><img src="images/elcamino-filmlerim.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(6).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(6).getCategory());%></p>
-                </div>
+              </div>
+             <%}%>
               </div>
             </div>
           </div>

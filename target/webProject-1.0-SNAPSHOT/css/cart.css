@@ -55,7 +55,7 @@
     background-color: #6f42c1;
     color:white;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
     text-decoration: none;
     display: block;
     border-radius: 3px;
@@ -63,12 +63,22 @@
     display:inline;
     position:static;
     margin-top: 30px;
+    cursor: pointer;
 }
+.cartbuttonform{
+    display: block;
+    display:inline;
+}
+.cancelbuttonform{
+    display: block;
+    display:inline;
+}
+
 .cancelbutton{
     background-color: #990000;
     color:white;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
     text-decoration: none;
     display: block;
     border-radius: 3px;
@@ -76,6 +86,7 @@
     display:inline;
     position:static;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .decbuttons{
@@ -85,8 +96,8 @@
     text-decoration: none;
     display:inline;
     border-radius: 3px;
-    padding-left:2px;
-    padding-right:2px;
+    padding-left:5px;
+    padding-right:5px;
 }
 .addbuttons{
     background-color: #6f42c1;
@@ -95,6 +106,8 @@
     text-decoration: none;
     display:inline;
     border-radius: 3px;
+    padding-left:3px;
+    padding-right:3px;
 }
 
 .cartimg {

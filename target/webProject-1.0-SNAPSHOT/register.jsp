@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/cart.css">
   </head>
     <body>
         <div class="preloader">

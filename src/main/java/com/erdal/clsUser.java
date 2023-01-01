@@ -27,7 +27,12 @@ public class clsUser {
         return arrWatchedMovies;
     }
     public void setWatchedMovies(String watchedMovies) {
+        if(this.watchedMovies.equals("")){
         this.watchedMovies = watchedMovies;
+        }
+        else{
+        this.watchedMovies += "," + watchedMovies;
+        }
     }
     Date registerDate = new Date();
     public String getSessionId() {

@@ -15,7 +15,24 @@
         <%  
             if(cart.getTotalPrice() == 0)
             response.sendRedirect(request.getContextPath() + "/vizyondakiler.jsp");
-            
+            else{
+        %>
+            <form action="filmlerim.jsp" method="POST">
+                <input type="hidden" name="odemeDurum" value="odemeyiyap"/>
+                <input type="submit" value="Ödemeyi Gerçekleştir"/>
+            </form>
+            <form action="vizyondakiler.jsp" method="POST">
+                <input type="hidden" name="odemeDurum" value="geridon"/>
+                <input type="submit" value="Vizyondakilere Geri Dön" />
+            </form>
+        <%
+            String status = request.getParameter("odemeDurum");
+            if(status.equals("odemeyiyap")){
+                
+                
+                
+                }
+            }
         %>
     </body>
 </html>
