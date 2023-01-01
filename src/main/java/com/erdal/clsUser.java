@@ -21,18 +21,11 @@ public class clsUser {
     String watchedMovies;
     ArrayList<clsMovie> watchedMoviesList;
 
-    public String[] getWatchedMovies() {
-        String[] arrWatchedMovies;
-        arrWatchedMovies = watchedMovies.split(",");
-        return arrWatchedMovies;
+    public String getWatchedMovies() {
+        return watchedMovies;
     }
     public void setWatchedMovies(String watchedMovies) {
-        if(this.watchedMovies.equals("")){
         this.watchedMovies = watchedMovies;
-        }
-        else{
-        this.watchedMovies += "," + watchedMovies;
-        }
     }
     Date registerDate = new Date();
     public String getSessionId() {
@@ -177,6 +170,33 @@ public class clsUser {
         return user;
     }
     
+    public clsUser getUserById(int id) {
+        
+        clsUser user = new clsUser();
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+            Statement stmt = con.createStatement();
+            String sql = "SELECT * FROM `tbUsers` WHERE `ID` LIKE '" + id + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+              user.setId(rs.getInt(1));
+              user.setName(rs.getString(2));
+              user.setPassword(rs.getString(3));
+              user.setMail(rs.getString(4));
+              user.setTelno(rs.getString(5));
+              user.setType(rs.getString(6));
+              user.setRegisterDate(rs.getDate(7));
+              user.setWatchedMovies(rs.getString(8));
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return user;
+    }
+    
     public ArrayList<clsUser> getAllUsers(){
         
         ArrayList<clsUser> users = new ArrayList<clsUser>();
@@ -191,12 +211,8 @@ public class clsUser {
               clsUser user = new clsUser();
               user.setId(rs.getInt(1));
               user.setName(rs.getString(2));
-              user.setPassword(rs.getString(3));
               user.setMail(rs.getString(4));
-              user.setTelno(rs.getString(5));
               user.setType(rs.getString(6));
-              user.setRegisterDate(rs.getDate(7));
-              user.setWatchedMovies(rs.getString(8));
               users.add(user);
             }
             con.close();

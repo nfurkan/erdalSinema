@@ -238,7 +238,7 @@
             <h3 class="breadcrumbs-custom-title">HOŞ GELDİNİZ ERDAL BEY</h3>
             <div class="breadcrumbs-custom-decor"></div>
           </div>
-          <div class="box-transform" style="background-image: url(images/silincek.jpg);"></div>
+          <div class="box-transform" style="background-image: url(images/erdalbey.jpg);"></div>
         </div>
         <div class="container">
           <ul class="breadcrumbs-custom-path">

@@ -204,6 +204,7 @@
             if(newUser.checkUser(mail, password)){
                 clsUser admin;
                 admin = newUser.getUser(mail);
+                user.setWatchedMovies(admin.getWatchedMovies());
                 
                 Cookie newCookie = new Cookie("SESSIONID",user.sessionIdGenerator(mail));
                 user.setSessionId(user.sessionIdGenerator(mail));

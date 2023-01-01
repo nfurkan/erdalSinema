@@ -8,7 +8,7 @@
 <jsp:useBean id="cart" class="com.erdal.clsCart" scope="session"/>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Contacts</title>
+    <title>Filmlerim</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,25 +60,32 @@
       </div>
     </div>
     <div class="page">
-    <%
+    <% 
+        boolean loginSuccess = false;
+        boolean isAdmin = false;
+        Cookie cookie= null;
+        Cookie[] cookies= null;
+        cookies = request.getCookies();
         
         clsMovie movie = new clsMovie();
         ArrayList<clsMovie> movies = new ArrayList<clsMovie>();
         movies = movie.getMovies();
         
-        String[] usersWatchedMovies = user.getWatchedMovies();
         ArrayList<clsMovie> usersMovies = new ArrayList<clsMovie>();
+        String[] usersWatchedMovies = user.getWatchedMovies().split(",");
         
-        for(int i = 0; i < movies.size(); i++){
-        
-            if(movies.get(i).getName().equals(usersWatchedMovies[i])){
-                
-                int id = movies.get(i).getId();
-                usersMovies.add(movie.getMovie(id));
-        
+        if(!(user.getWatchedMovies().equals(""))){
+            for(int i = 0; i < usersWatchedMovies.length; i++){
+                for(int j = 0; j < movies.size(); j++){
+                    
+                    if(movies.get(j).getName().equals(usersWatchedMovies[i])){
+                    
+                        usersMovies.add(movies.get(j));
+                    
+                    }
+                }
             }
-        }
-        
+        }   
     %>
       <!-- Page Header-->
       <header class="section page-header">
@@ -127,11 +134,6 @@
                      <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="kampanyalar.jsp">Kampanyalar</a>
                       </li>-->
                       <%
-                            boolean loginSuccess = false;
-                            boolean isAdmin = false;
-                            Cookie cookie= null;
-                            Cookie[] cookies= null;
-                            cookies = request.getCookies();
                             if(cookies != null){
                             for(int i = 0; i < cookies.length; i++){
                                 cookie= cookies[i];
@@ -285,32 +287,6 @@
       <section class="section section-lg bg-default">
         <div class="container">
           <div class="tabs-custom row row-50 justify-content-center flex-lg-row-reverse text-center text-md-left" id="tabs-4">
-            <div class="col-lg-4 col-xl-3">
-              <h5 class="text-spacing-200 text-capitalize">FİLM LİSTESİ</h5>
-              <ul class="nav list-category list-category-down-md-inline-block">
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">
-                <%out.println(movies.get(0).getName());%>
-                </a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">
-                <%out.println(movies.get(1).getName());%>
-                </a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">
-                <%out.println(movies.get(2).getName());%>    
-                </a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-4" data-toggle="tab">
-                <%out.println(movies.get(3).getName());%>    
-                </a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-5" data-toggle="tab">
-                <%out.println(movies.get(4).getName());%>    
-                </a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-6" data-toggle="tab">
-                <%out.println(movies.get(5).getName());%>    
-                </a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-7" data-toggle="tab">
-                <%out.println(movies.get(6).getName());%>    
-                </a></li>
-              </ul>
-            </div>
             <div class="col-lg-8 col-xl-9">
               <!-- Tab panes-->
               <div class="tab-content tab-content-1">
@@ -320,13 +296,13 @@
               <div class="tab-content tab-content-1">
                 <div class="tab-pane fade show active" id="tabs-4-1">
                   <h4><%out.println(usersMovies.get(i).getName());%></h4>
-                  <p><%out.println(movies.get(i).getSummary());%></p>
-                  <p>Gösterime giriş tarihi: <%out.println(movies.get(i).getPublishDate());%></p><img src="images/<%out.println(movies.get(i).getPictureName());%>-filmlerim.jpg" alt="" width="835" height="418"/>
-                  <p>Yönetmeni: <%out.println(movies.get(i).getDirector());%></p>
-                  <p>Kategori: <%out.println(movies.get(i).getCategory());%></p>
+                  <p><%out.println(usersMovies.get(i).getSummary());%></p>
+                  <p>Gösterime giriş tarihi: <%out.println(usersMovies.get(i).getPublishDate());%></p><img src="images/<%out.println(usersMovies.get(i).getPictureName());%>-filmlerim.jpg" alt="" width="835" height="418"/>
+                  <p>Yönetmeni: <%out.println(usersMovies.get(i).getDirector());%></p>
+                  <p>Kategori: <%out.println(usersMovies.get(i).getCategory());%></p>
                 </div>
               </div>
-             <%}%>
+             <%out.println("<br><br><br>");}%>
               </div>
             </div>
           </div>
@@ -382,8 +358,9 @@
         </div>
        </section>
       </section>
+     <br>
     <br>
-    <br>
+    </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
