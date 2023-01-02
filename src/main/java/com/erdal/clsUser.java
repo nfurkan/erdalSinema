@@ -27,6 +27,9 @@ public class clsUser {
     public void setWatchedMovies(String watchedMovies) {
         this.watchedMovies = watchedMovies;
     }
+    public void addWatchedMovies(String newAddedMovie){
+        this.watchedMovies += "," + newAddedMovie;
+    }
     Date registerDate = new Date();
     public String getSessionId() {
         return sessionId;

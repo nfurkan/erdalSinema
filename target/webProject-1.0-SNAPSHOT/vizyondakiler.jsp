@@ -152,7 +152,7 @@
                                         for(int i = 0; i < cartMovieNames.length; i++){
                                       %>
                                         <div class="row movie-ticket">
-                                            <img class="cartimg" src="images/<%out.println(cartMoviePictureNames[i]);%>-vizyondakiler.jpg" alt="foto"></img>
+                                            <img class="cartimg" src="images/<%out.println(cartMoviePictureNames[i]);%>-vizyondakiler.jpg" alt="foto">
                                             <span class="movie-info">
                                                 <span class="movie-name"><%out.println(cartMovieNames[i]);%></span>
                                                 <button class="decbuttons" type="button" value="dec">-</button>

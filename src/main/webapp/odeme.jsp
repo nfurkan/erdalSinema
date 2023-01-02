@@ -12,25 +12,56 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%  
-            if(cart.getTotalPrice() == 0)
-            response.sendRedirect(request.getContextPath() + "/vizyondakiler.jsp");
-            else{
-        %>
-            <form action="filmlerim.jsp" method="POST">
-                <input type="hidden" name="odemeDurum" value="odemeyiyap"/>
-                <input type="submit" value="Ödemeyi Gerçekleştir"/>
-            </form>
-            <form action="vizyondakiler.jsp" method="POST">
-                <input type="hidden" name="odemeDurum" value="geridon"/>
-                <input type="submit" value="Vizyondakilere Geri Dön" />
-            </form>
         <%
-            String status = request.getParameter("odemeDurum");
-            if(status.equals("odemeyiyap")){
+            if (cart.getTotalPrice() == 0)
+                response.sendRedirect(request.getContextPath() + "/vizyondakiler.jsp");
+            else {
+            
+                clsMovie movie = new clsMovie();
+                ArrayList<clsMovie> movies = new ArrayList<clsMovie>();
+                movies = movie.getMovies();
+                String[] cartMovieNames;
+                String[] cartMoviePictureNames;
+                cartMovieNames = cart.getCartMovieNames();
+                cartMoviePictureNames = cart.getCartMoviePictureNames();
+                ArrayList<clsMovie> cartMovies = new ArrayList<clsMovie>();
                 
-                
-                
+                for (int i = 0; i < cartMovieNames.length; i++) {
+                    for (int j = 0; j < movies.size(); j++) {
+
+                        if (movies.get(j).getName().equals(cartMovieNames[i])) {
+
+                            cartMovies.add(movies.get(j));
+
+                        }
+                    }
+                }
+                for (int i = 0; i < cartMovies.size(); i++) {
+        %>
+        <form action="odemeredirect.jsp" method="POST">
+            <%out.println(cartMovies.get(i).getName()+"<br>");%>
+            <img class="cartimg" src="images/<%out.println(cartMoviePictureNames[i]);%>-vizyondakiler.jpg" alt="foto"><br>
+            Koltuk Numarası Belirleyiniz: <input type="number" name="koltukSayisi" min="0" max="40"/><br><br>
+            Seans Belirleyiniz: <select name="seansBilgisi">
+                <%
+                    clsMovieSessions movieSession = new clsMovieSessions();
+                    ArrayList<clsMovieSessions> movieSessions = new ArrayList<clsMovieSessions>();
+                    movieSessions = movieSession.getMovieSessions();
+                    
+                        for(int k = 0; k < movieSessions.size(); k++){
+                        
+                            if(movieSessions.get(k).getMovieId() == cartMovies.get(i).getId()){
+                %>
+                            <option><%out.println("Başlangıç: " + movieSessions.get(k).getStartTime() + " Bitiş: " + movieSessions.get(k).getFinishTime());%></option>
+                <%
+                        }
+                }
+
+                %>
+            </select><br><br>
+            <input type="submit" value="Satın Al"/>
+        </form><br><br><br>
+        <%      
                 }
             }
         %>
