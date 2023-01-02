@@ -309,7 +309,7 @@
           </div>
         </div>
       </section>
-      <button style="visibility: visible;" style="text-align: center;" style="background-position: center center;" class="button button-Ig button-primary button-winona" onclick="ShowIt()">Film Öner</button>
+      <!--<button style="visibility: visible;" style="text-align: center;" style="background-position: center center;" class="button button-Ig button-primary button-winona" onclick="ShowIt()">Film Öner</button>
       <section class="section section-lg bg-gray-100 text-left section-relative">
       <section style="visibility: hidden" id="section-hidden">
         <div class="container">
@@ -360,7 +360,7 @@
        </section>
       </section>
      <br>
-    <br>
+    <br>-->
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>

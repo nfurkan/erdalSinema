@@ -21,6 +21,7 @@
             String baslangicSaati = seansBilgisi[0];
             String bitisSaati = seansBilgisi[1];
             yeniBilet.addTicket(user.getId(), movieSession.getId(), 30, koltukSayisi);
+            response.sendRedirect(request.getContextPath() + "/filmlerim.jsp");
 
         %>
     </body>
