@@ -97,3 +97,36 @@ function allLetter(inputtxt)
             obj2.style.visibility = "hidden";
         }
     }
+    
+    function moviecontrolname(name,director,actors,format,categories,summary){
+        var letters = /^[A-Za-z]+$/;
+        if(name.value.match(letters) && director.value.match(letters) && actors.value.match(letters) && format.value.match(letters) && categories.value.match(letters) && summary.value.match(letters))
+          {
+           return true;
+          }
+        else
+          {
+          alert("Özel karakterler kullanılamaz.");
+          return false;
+          }
+    }
+    function moviecontrolnumber(age,screentime){
+        var numbers = /^[0-9]+$/;
+        if(age.value.match(numbers && screentime.value.match(numbers)))
+          {
+           return true;
+          }
+        else
+          {
+          alert("Numara girilmesi gereken yerlere numara yazınız.");
+          return false;
+          }
+    }
+    function moviecontrol(name,director,actors,format,categories,summary,age,screentime){
+        var moviecontrolname = moviecontrolname(name,director,actors,format,categories,summary);
+        var moviecontrolnumber = moviecontrolnumber(age,screentime);
+        if(moviecontrolname === true && moviecontrolnumber === true){
+            return true;
+        }
+        else return false;
+    }

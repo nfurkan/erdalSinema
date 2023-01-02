@@ -5,7 +5,9 @@
 package com.erdal;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -94,4 +96,24 @@ public class clsMovieSessions {
         return movieSessions;
     }
     
+    public String addMovieSession(Date startTime, Date finishTime, int saloon, int movieId, int totalSeatNumber){
+        String sql = "INSERT INTO `grup11`.`tbMovieSessions` (`ID`, `starttime`, `finishtime`, `saloon`, `movieID`, `totalseatnumber`) "
+                + "VALUES (NULL, '2023-01-11 09:30:00', '2023-01-11 12:30:00', '4', '17', '40');";
+            
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
+                PreparedStatement stmt = con.prepareStatement("INSERT INTO tbMovieSessions (starttime, finishtime, saloon, movieID, totalseatnumber) VALUES (?,?,?,?,?)");
+                stmt.setDate(1,startTime);
+                stmt.setDate(2,finishTime);
+                stmt.setInt(3,saloon);
+                stmt.setInt(4,movieId);
+                stmt.setInt(5,totalSeatNumber);
+                stmt.executeUpdate();
+                con.close();
+            } catch (Exception e) {
+                return ("İşlem esnasında bir hata meydana geldi lütfen bütün alanları kontrol ederek bir kez daha deneyiniz."); 
+            }
+            return ("");
+        }
 }

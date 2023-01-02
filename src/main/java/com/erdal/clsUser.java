@@ -6,6 +6,7 @@ package com.erdal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -125,7 +126,7 @@ public class clsUser {
     }
 
     public String addUser() {
-
+        
         String sql = "INSERT INTO `tbUsers`(`ID`, `name`, `password`, `mail`, `telno`, `type`, `registerdate`)"
                 + "VALUES (NULL,'" + this.getName() + "','" + this.getPassword() + "','" + this.getMail() + "','" + this.getTelno() + "','" + this.getType() + "',CURRENT_TIMESTAMP)";
         
@@ -134,8 +135,13 @@ public class clsUser {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup11?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup11", "erdal");
-                Statement stmt = con.createStatement();
-                stmt.execute(sql);
+                PreparedStatement stmt = con.prepareStatement("INSERT INTO tbUsers (name, password, mail, telno, type) VALUES (?,?,?,?,?)");
+                stmt.setString(1,this.getName());
+                stmt.setString(2,this.getPassword());
+                stmt.setString(3,this.getMail());
+                stmt.setString(4,this.getTelno());
+                stmt.setString(5,this.getType());
+                stmt.executeUpdate();
                 con.close();
             } catch (Exception e) {
                 System.out.println(e);

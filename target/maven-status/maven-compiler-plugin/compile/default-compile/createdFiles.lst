@@ -1,3 +1,5 @@
+com\erdal\clsTicket.class
 com\erdal\clsUser.class
 com\erdal\clsCart.class
 com\erdal\clsMovie.class
+com\erdal\clsMovieSessions.class
